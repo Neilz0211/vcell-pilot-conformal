@@ -32,5 +32,6 @@
 !/virtual_cell/results/*.json
 !/virtual_cell/results/*.log
 !/virtual_cell/results/gears12/
+!/virtual_cell/results/tahoe/
 !/virtual_cell/figures/
 !/virtual_cell/prereg/

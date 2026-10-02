@@ -2,3 +2,24 @@
   transfer (ridge, A->B)   certified 0.001 precision 0.75 recall 0.00 | median predicted specific 1.706 vs radius 15.124
   insource (ridge, B->B)   certified 0.000 precision nan recall 0.00 | median predicted specific 1.899 vs radius 14.818
   oracle s=0.3             certified 0.966 precision 0.26 recall 1.00 | median predicted specific 8.114 vs radius 0.523
+  oracle s=0.7             certified 0.921 precision 0.27 recall 1.00 | median predicted specific 8.053 vs radius 1.221
+  oracle s=1.0             certified 0.888 precision 0.28 recall 1.00 | median predicted specific 8.036 vs radius 1.744
+== ess->rpe1, K=5
+  transfer (ridge, A->B)   certified 0.003 precision 0.61 recall 0.01 | median predicted specific 1.775 vs radius 10.219
+  insource (ridge, B->B)   certified 0.000 precision nan recall 0.00 | median predicted specific 1.520 vs radius 10.209
+  oracle s=0.3             certified 1.000 precision 0.25 recall 1.00 | median predicted specific 5.783 vs radius 0.411
+  oracle s=0.7             certified 0.999 precision 0.25 recall 1.00 | median predicted specific 5.791 vs radius 0.958
+  oracle s=1.0             certified 0.996 precision 0.25 recall 1.00 | median predicted specific 5.812 vs radius 1.369
+== hepg2->jurkat, K=1
+  transfer (ridge, A->B)   certified 0.041 precision 0.69 recall 0.11 | median predicted specific 2.733 vs radius 12.118
+  insource (ridge, B->B)   certified 0.006 precision 0.98 recall 0.02 | median predicted specific 1.621 vs radius 9.345
+  oracle s=0.3             certified 0.947 precision 0.26 recall 1.00 | median predicted specific 4.602 vs radius 0.528
+  oracle s=0.7             certified 0.881 precision 0.28 recall 1.00 | median predicted specific 4.610 vs radius 1.233
+  oracle s=1.0             certified 0.826 precision 0.30 recall 1.00 | median predicted specific 4.632 vs radius 1.761
+== hepg2->jurkat, K=5
+  transfer (ridge, A->B)   certified 0.017 precision 0.73 recall 0.05 | median predicted specific 1.967 vs radius 9.240
+  insource (ridge, B->B)   certified 0.000 precision nan recall 0.00 | median predicted specific 1.244 vs radius 8.505
+  oracle s=0.3             certified 1.000 precision 0.25 recall 1.00 | median predicted specific 4.137 vs radius 0.419
+  oracle s=0.7             certified 0.997 precision 0.25 recall 1.00 | median predicted specific 4.208 vs radius 0.978
+  oracle s=1.0             certified 0.986 precision 0.25 recall 1.00 | median predicted specific 4.272 vs radius 1.398
+AUDIT_DONE

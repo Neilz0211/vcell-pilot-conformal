@@ -40,8 +40,4 @@ corr 0.918, MAE 0.94 pp, slope 0.69; rho range 0.028-0.432. **PASS**
 - Plate: share of per-plate offset energy carried by the shared offset, ||d||^2 / mean_p ||d_p||^2: median 0.16 (IQR 0.14-0.18); 1 = identical offset on every plate.
 - Per-target-line median ridge coverage: lowest NCI-H661 0.001, SW 1271 0.003, CHP-212 0.102; highest A498 0.983, HEC-1-A 0.984, NCI-H2347 0.985.
 - Cross term 2<e_A, d>: median -0.0059 vs Delta^2 median 0.0503.
-
-## Post-hoc (exploratory, not pre-registered)
-spearman cov vs D2 -0.827, vs sB2-sA2 -0.984, vs total energy change -0.984
-sB2/sA2 ratio median 0.78 IQR 0.50-1.23
-spearman cov vs (qA^2-D2)/sB2 0.982
+- Highest dose only (1802 pairs): Spearman(Delta^2, coverage) -0.833; ridge < mean in 64.2%; adapted coverage m=50 0.914.

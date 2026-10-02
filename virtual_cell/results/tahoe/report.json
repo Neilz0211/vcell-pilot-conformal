@@ -1,0 +1,17 @@
+{
+ "lines": 50,
+ "units": 1308,
+ "drugs": 379,
+ "units_without_fp": 6,
+ "drugs_without_fp": [
+  "Sacubitril/Valsartan",
+  "Verteporfin"
+ ],
+ "smiles_unparsed": [
+  "Sacubitril/Valsartan",
+  "Verteporfin"
+ ],
+ "genes_passing": 10128,
+ "pool": 3000,
+ "present_blocks": 65218
+}

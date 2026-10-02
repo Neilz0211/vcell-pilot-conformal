@@ -20,7 +20,8 @@ one cell line and used in another.
 | `paper/` | LaTeX sources (`main.tex`, `supplementary.tex`, `references.bib`), figures and compiled PDFs |
 | `virtual_cell/src/` | All analysis code (Python) |
 | `virtual_cell/gears/` | GEARS experiments (separate environment with CUDA PyTorch) |
-| `virtual_cell/pod/` | Scripts used on a rented cloud machine: raw single-cell → pseudobulk for HepG2/Jurkat, and parallel GEARS runs |
+| `virtual_cell/pod/` | Scripts used on rented cloud machines: raw single-cell → pseudobulk for HepG2/Jurkat, parallel GEARS runs, the Tahoe-100M replication and STATE retraining |
+| `virtual_cell/prereg/` | Pre-registration of the Tahoe-100M replication |
 | `virtual_cell/results/` | Result summaries (`*.md`) and metrics (`*.json`) behind every number in the paper |
 | `virtual_cell/figures/` | Exploratory figures |
 
@@ -68,6 +69,8 @@ into `results/` (logs are tracked as `results/*.log`).
 | Pathway scores (Fig. 4) | `src/pathway.py --seeds 20`, `src/fig_pathway.py` | `pathway_metrics.json`, `pathway_run20.log` |
 | Numerical checks of the theory | `src/theory_checks.py` | `theory_checks.json` |
 | Paper figures 1-3 | `src/figures_paper.py` | `paper/figs/` |
+| Tahoe-100M pre-registered replication (Section 5.5, Appendix D) | registration `prereg/PREREG_tahoe.md` (git 6561021); on a 32-vCPU cloud CPU machine: `pod/tahoe_extract.py OUT` (downloads the CC0 DE table from Hugging Face), `pod/tahoe_compact.py OUT`, `pod/tahoe_pairs.py OUT/compact --pairs all --models core --seeds 20`, `--pairs subset100 --models ladder --seeds 10`, `--pairs all --models core --seeds 20 --dose high`, then `pod/tahoe_summary.py` and `pod/tahoe_posthoc.py` | `tahoe_*_metrics.json`, `tahoe_summary.md` (P1-P6), `tahoe_posthoc.md` (exploratory), `tahoe/` (gene pool, units, lines) |
+| STATE retrained per source line (Section 5.1, Appendix E) | on a GPU machine with `pip install arc-state`: `pod/st_prep.py` (Arc's `Replogle-Nadig-Preprint/replogle.h5ad`, GO-SVD features), `pod/st_train.sh SRC SEED STEPS` (seed 0: 20,000 steps; seeds 1-2: 8,000), `state tx predict --predict-only` (set `OMP_NUM_THREADS`), `pod/st_eval.py`, `pod/st_summary.py` | `st_eval_*.json`, `st_summary.txt` |
 
 Build the paper with any LaTeX engine, for example `tectonic main.tex` inside `paper/`.
 

@@ -25,4 +25,3 @@ pairs with ridge coverage > 0.93: 55.8%; < 0.85: 30.3%; < 0.5: 13.2%. Among over
 - m=20: wrong arm in 0 pairs; radius regret median 0.00%, max 0.00%
 - m=50: wrong arm in 20 pairs; radius regret median 0.44%, max 1.66%
 - m=100: wrong arm in 10 pairs; radius regret median 0.17%, max 1.12%
-850 HT-29->HepG2/C3A 358 D2 0.127 covsrc 0.671 mean 0.671 ad50 0.925 792s
