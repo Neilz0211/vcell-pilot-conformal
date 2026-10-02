@@ -77,14 +77,21 @@ def main():
                 h = m // 2; b = (Yp[:h] - Pp[:h]).mean(0)
                 qs = split_cp_q(rmse(Pp[h:] + b, Yp[h:]), alpha); ss = rmse(Pt + b, YB[test])
                 put(f"split_q_{m}", qs); put(f"split_cov_{m}", (ss <= qs).mean())
+                # predict-the-mean baseline on the same pilots: unadapted (pilot-only CP) and adapted (= the pilot mean of
+                # the target responses, with the same Prop A outer ball). Answers "does the source model add anything once
+                # the offset is removed?"
+                mu = YA[tr].mean(0); Mp = np.tile(mu, (m, 1)); Mt = np.tile(mu, (len(test), 1))
+                qm0 = split_cp_q(rmse(Mp, Yp), alpha); put(f"mpilot_q_{m}", qm0); put(f"mpilot_cov_{m}", (rmse(Mt, YB[test]) <= qm0).mean())
+                Rm = (m + 1) / m * loo_radius("offset", Mp, Yp, alpha); sm = rmse(fit_adapt("offset", Mp, Yp)(Mt), YB[test])
+                put(f"madapted_q_{m}", Rm); put(f"madapted_cov_{m}", (sm <= Rm).mean())
         summ = {"n_cal_mean": float(np.mean(raw["n_cal"])), "full_q": float(np.mean(raw["full_q"])), "full_cov": float(np.mean(raw["full_cov"]))}
         for m in MS:
             ad = np.array(raw[f"adapted_q_{m}"])
-            for ref in ("full", "split", "pilot"):
+            for ref in ("full", "split", "pilot", "madapted"):
                 rq = np.array(raw["full_q"] if ref == "full" else raw[f"{ref}_q_{m}"])
                 rel = 100 * (ad / rq - 1)
                 summ[f"ad{m}_vs_{ref}"] = {"mean_pct": ci(rel)[0], "ci_pct": ci(rel)[1:], "wins": int((ad < rq).sum()), "n": len(ad)}
-            for meth in ("pilot", "adapted", "split"):
+            for meth in ("pilot", "adapted", "split", "mpilot", "madapted"):
                 summ[f"{meth}_q_{m}"] = float(np.mean(raw[f"{meth}_q_{m}"])); summ[f"{meth}_cov_{m}"] = float(np.mean(raw[f"{meth}_cov_{m}"]))
         res[f"{A}->{B}"] = {"summary": summ, "raw": raw}
         x = summ
@@ -92,7 +99,9 @@ def main():
               + " | ".join(f"m{m}: ad {x[f'adapted_q_{m}']:.3f}/{x[f'adapted_cov_{m}']:.3f} split {x[f'split_q_{m}']:.3f}/{x[f'split_cov_{m}']:.3f} "
                            f"pil {x[f'pilot_q_{m}']:.3f}/{x[f'pilot_cov_{m}']:.3f}" for m in (20, 50))
               + f" || ad50 vs full {x['ad50_vs_full']['mean_pct']:+.1f}% [{x['ad50_vs_full']['ci_pct'][0]:+.1f},{x['ad50_vs_full']['ci_pct'][1]:+.1f}] wins {x['ad50_vs_full']['wins']}/{x['ad50_vs_full']['n']}"
-              + f" ; ad50 vs split {x['ad50_vs_split']['mean_pct']:+.1f}% [{x['ad50_vs_split']['ci_pct'][0]:+.1f},{x['ad50_vs_split']['ci_pct'][1]:+.1f}] wins {x['ad50_vs_split']['wins']}", flush=True)
+              + f" ; ad50 vs split {x['ad50_vs_split']['mean_pct']:+.1f}% [{x['ad50_vs_split']['ci_pct'][0]:+.1f},{x['ad50_vs_split']['ci_pct'][1]:+.1f}] wins {x['ad50_vs_split']['wins']}"
+              + f" ; ad50 vs adapted-mean {x['ad50_vs_madapted']['mean_pct']:+.1f}% [{x['ad50_vs_madapted']['ci_pct'][0]:+.1f},{x['ad50_vs_madapted']['ci_pct'][1]:+.1f}] wins {x['ad50_vs_madapted']['wins']}"
+              + f" (adapted-mean cov {x['madapted_cov_50']:.3f})", flush=True)
     (OUT / f"paired_{a.prep}_metrics.json").write_text(json.dumps(res))
     print("PAIRED_DONE", flush=True)
 

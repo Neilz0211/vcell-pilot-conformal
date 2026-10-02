@@ -78,10 +78,18 @@ def main():
                         q0 = split_cp_q(rmse(p[pil], yb[pil]), alpha)
                         R = (m + 1) / m * loo_radius("offset", p[pil], yb[pil], alpha)
                         st = rmse(fit_adapt("offset", p[pil], yb[pil])(p[test]), yb[test])
-                        d = rec.setdefault(f"{pname}|m{m}", {"pil_cov": [], "ad_cov": [], "ratio": [], "n_genes": []})
+                        d = rec.setdefault(f"{pname}|m{m}", {"pil_cov": [], "ad_cov": [], "ratio": [], "n_genes": [],
+                                                             "pil_excl": [], "ad_excl": [], "pil_sign": [], "ad_sign": []})
                         d["pil_cov"].append(float((rmse(p[test], yb[test]) <= q0).mean())); d["ad_cov"].append(float((st <= R).mean()))
                         d["ratio"].append(float(R / q0)); d["n_genes"].append(int(mask.sum()))
-            res[f"{A}->{B}"] = {k: {kk: float(np.mean(vv)) for kk, vv in d.items()} for k, d in rec.items()}
+                        # decision readout: the 90 % interval for the programme score excludes 0 (no change vs controls);
+                        # when it does, is the sign of the interval the sign of the true score?
+                        c0 = p[test, 0]; c1 = fit_adapt("offset", p[pil], yb[pil])(p[test])[:, 0]; ytrue = yb[test, 0]
+                        for nm, c, q in (("pil", c0, q0), ("ad", c1, R)):
+                            ex = np.abs(c) > q
+                            d[f"{nm}_excl"].append(float(ex.mean()))
+                            d[f"{nm}_sign"].append(float((np.sign(c[ex]) == np.sign(ytrue[ex])).mean()) if ex.any() else np.nan)
+            res[f"{A}->{B}"] = {k: {kk: (float(np.nanmean(vv)) if np.isfinite(vv).any() else None) for kk, vv in d.items()} for k, d in rec.items()}
             x = res[f"{A}->{B}"]
             print(f"{A}->{B}: " + " | ".join(f"{k.split('|')[0][:12]} m50 cov {x[k]['pil_cov']:.3f}/{x[k]['ad_cov']:.3f} width x{x[k]['ratio']:.2f}"
                                           for k in x if k.endswith("m50")), flush=True)
