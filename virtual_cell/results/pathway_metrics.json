@@ -1,0 +1,686 @@
+{
+ "ess->rpe1": {
+  "cell cycle|m20": {
+   "pil_cov": 0.8985714285714286,
+   "ad_cov": 0.9251785714285713,
+   "ratio": 0.7089056904651851,
+   "n_genes": 65.95
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.9016071428571427,
+   "ad_cov": 0.9100000000000001,
+   "ratio": 0.644040697922408,
+   "n_genes": 65.95
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9274999999999999,
+   "ad_cov": 0.9342857142857142,
+   "ratio": 1.063513329050215,
+   "n_genes": 78.5
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9205357142857145,
+   "ad_cov": 0.9221428571428572,
+   "ratio": 1.0259810956975473,
+   "n_genes": 78.5
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9294642857142857,
+   "ad_cov": 0.9298214285714286,
+   "ratio": 0.9880261909665228,
+   "n_genes": 20.5
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9226785714285717,
+   "ad_cov": 0.9180357142857142,
+   "ratio": 0.9615738852587775,
+   "n_genes": 20.5
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9214285714285714,
+   "ad_cov": 0.9321428571428572,
+   "ratio": 0.9444776834253467,
+   "n_genes": 8.0
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.9107142857142857,
+   "ad_cov": 0.9214285714285714,
+   "ratio": 1.0034440643328681,
+   "n_genes": 8.0
+  }
+ },
+ "ess->hepg2": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9069642857142858,
+   "ad_cov": 0.9360714285714286,
+   "ratio": 1.0573533932764563,
+   "n_genes": 65.85
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8839285714285715,
+   "ad_cov": 0.8992857142857144,
+   "ratio": 0.9955014639762979,
+   "n_genes": 65.85
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9237500000000001,
+   "ad_cov": 0.931607142857143,
+   "ratio": 1.0818626110126008,
+   "n_genes": 78.55
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9183928571428573,
+   "ad_cov": 0.9217857142857142,
+   "ratio": 1.0350723816795973,
+   "n_genes": 78.55
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9107142857142858,
+   "ad_cov": 0.9126785714285715,
+   "ratio": 1.0534488257178403,
+   "n_genes": 20.45
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.904107142857143,
+   "ad_cov": 0.9108928571428573,
+   "ratio": 1.0434866425761116,
+   "n_genes": 20.45
+  }
+ },
+ "ess->jurkat": {
+  "cell cycle|m20": {
+   "pil_cov": 0.8791071428571428,
+   "ad_cov": 0.9021428571428572,
+   "ratio": 1.0367401911566974,
+   "n_genes": 65.3
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8857142857142858,
+   "ad_cov": 0.8939285714285715,
+   "ratio": 0.9517684523889962,
+   "n_genes": 65.3
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9039285714285714,
+   "ad_cov": 0.9164285714285713,
+   "ratio": 1.0797266481383763,
+   "n_genes": 78.6
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.8989285714285714,
+   "ad_cov": 0.9069642857142857,
+   "ratio": 1.0389321926465387,
+   "n_genes": 78.6
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9032142857142859,
+   "ad_cov": 0.9198214285714285,
+   "ratio": 1.0789064476835395,
+   "n_genes": 20.05
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.8925000000000001,
+   "ad_cov": 0.9012500000000001,
+   "ratio": 1.0128195673493934,
+   "n_genes": 20.05
+  }
+ },
+ "rpe1->ess": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9276785714285716,
+   "ad_cov": 0.9228571428571428,
+   "ratio": 0.47824494960001385,
+   "n_genes": 85.65
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.9016071428571427,
+   "ad_cov": 0.8994642857142858,
+   "ratio": 0.44944881115720425,
+   "n_genes": 85.65
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.8880357142857143,
+   "ad_cov": 0.9078571428571427,
+   "ratio": 0.9754251762752432,
+   "n_genes": 56.25
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.8819642857142858,
+   "ad_cov": 0.8769642857142858,
+   "ratio": 0.8901934134430244,
+   "n_genes": 56.25
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9008928571428569,
+   "ad_cov": 0.9244642857142857,
+   "ratio": 0.8050434382754321,
+   "n_genes": 30.2
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.91375,
+   "ad_cov": 0.9058928571428572,
+   "ratio": 0.7017704141448368,
+   "n_genes": 30.2
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9326785714285712,
+   "ad_cov": 0.9251785714285715,
+   "ratio": 0.6123693165571205,
+   "n_genes": 11.0
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.9049999999999999,
+   "ad_cov": 0.9108928571428571,
+   "ratio": 0.5755952214831159,
+   "n_genes": 11.0
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.8798701298701299,
+   "ad_cov": 0.9074675324675325,
+   "ratio": 1.0891543660582261,
+   "n_genes": 8.545454545454545
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.9178571428571427,
+   "ad_cov": 0.9162337662337663,
+   "ratio": 0.9583438883160267,
+   "n_genes": 8.545454545454545
+  }
+ },
+ "rpe1->hepg2": {
+  "cell cycle|m20": {
+   "pil_cov": 0.8732142857142857,
+   "ad_cov": 0.9230357142857143,
+   "ratio": 0.8739769937248317,
+   "n_genes": 87.4
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.9051785714285714,
+   "ad_cov": 0.9225000000000001,
+   "ratio": 0.7565776909467967,
+   "n_genes": 87.4
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9144642857142857,
+   "ad_cov": 0.9308928571428572,
+   "ratio": 1.0887566200928618,
+   "n_genes": 56.9
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9110714285714285,
+   "ad_cov": 0.9150000000000003,
+   "ratio": 0.9461856658765327,
+   "n_genes": 56.9
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9067857142857145,
+   "ad_cov": 0.9132142857142858,
+   "ratio": 0.9683139380439657,
+   "n_genes": 30.0
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9101785714285713,
+   "ad_cov": 0.9069642857142858,
+   "ratio": 0.8943349791871308,
+   "n_genes": 30.0
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9225,
+   "ad_cov": 0.9282142857142857,
+   "ratio": 1.0478184978024327,
+   "n_genes": 11.0
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.9128571428571428,
+   "ad_cov": 0.9099999999999999,
+   "ratio": 0.9713575924120439,
+   "n_genes": 11.0
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.9178571428571428,
+   "ad_cov": 0.9211038961038962,
+   "ratio": 0.9931269656898706,
+   "n_genes": 9.090909090909092
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.911038961038961,
+   "ad_cov": 0.9100649350649351,
+   "ratio": 0.933288038226301,
+   "n_genes": 9.090909090909092
+  }
+ },
+ "rpe1->jurkat": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9042857142857145,
+   "ad_cov": 0.9121428571428571,
+   "ratio": 0.5748837049566506,
+   "n_genes": 87.35
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8966071428571428,
+   "ad_cov": 0.8974999999999997,
+   "ratio": 0.5297347208366276,
+   "n_genes": 87.35
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9032142857142856,
+   "ad_cov": 0.9071428571428569,
+   "ratio": 0.9363283719917161,
+   "n_genes": 57.1
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.8960714285714285,
+   "ad_cov": 0.8966071428571427,
+   "ratio": 0.9105626177769179,
+   "n_genes": 57.1
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.8973214285714285,
+   "ad_cov": 0.9289285714285714,
+   "ratio": 0.8037195906780183,
+   "n_genes": 29.95
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.8994642857142857,
+   "ad_cov": 0.9096428571428572,
+   "ratio": 0.6992942095678649,
+   "n_genes": 29.95
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9151785714285715,
+   "ad_cov": 0.9183928571428572,
+   "ratio": 0.7229379075041058,
+   "n_genes": 10.95
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.9116071428571428,
+   "ad_cov": 0.9094642857142856,
+   "ratio": 0.6923851360820352,
+   "n_genes": 10.95
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.9032738095238096,
+   "ad_cov": 0.9148809523809525,
+   "ratio": 1.0088288856359264,
+   "n_genes": 8.666666666666666
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.894047619047619,
+   "ad_cov": 0.9029761904761905,
+   "ratio": 0.9924769709395519,
+   "n_genes": 8.666666666666666
+  }
+ },
+ "hepg2->ess": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9112500000000001,
+   "ad_cov": 0.9198214285714286,
+   "ratio": 0.9335091949082018,
+   "n_genes": 75.1
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8946428571428571,
+   "ad_cov": 0.9075000000000001,
+   "ratio": 0.9094556308860972,
+   "n_genes": 75.1
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.8923214285714286,
+   "ad_cov": 0.8985714285714286,
+   "ratio": 1.0456648887364683,
+   "n_genes": 61.7
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9,
+   "ad_cov": 0.9039285714285714,
+   "ratio": 1.0190898666214312,
+   "n_genes": 61.7
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.8807142857142857,
+   "ad_cov": 0.9107142857142859,
+   "ratio": 1.0280182979308514,
+   "n_genes": 25.7
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9099999999999998,
+   "ad_cov": 0.9182142857142856,
+   "ratio": 0.9227724082037693,
+   "n_genes": 25.7
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9069642857142858,
+   "ad_cov": 0.8949999999999999,
+   "ratio": 0.6578278678261442,
+   "n_genes": 9.9
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.8933928571428572,
+   "ad_cov": 0.8816071428571426,
+   "ratio": 0.6167591253787357,
+   "n_genes": 9.9
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.8948214285714284,
+   "ad_cov": 0.9046428571428571,
+   "ratio": 1.0215067129217101,
+   "n_genes": 12.6
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.9080357142857143,
+   "ad_cov": 0.9053571428571427,
+   "ratio": 0.9403805596713573,
+   "n_genes": 12.6
+  }
+ },
+ "hepg2->rpe1": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9235714285714286,
+   "ad_cov": 0.9369642857142857,
+   "ratio": 0.7572893273662705,
+   "n_genes": 75.0
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.9092857142857144,
+   "ad_cov": 0.9107142857142856,
+   "ratio": 0.7182277913484701,
+   "n_genes": 75.0
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9207142857142857,
+   "ad_cov": 0.925,
+   "ratio": 1.002331487881585,
+   "n_genes": 60.45
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.8983928571428572,
+   "ad_cov": 0.9051785714285714,
+   "ratio": 1.000261458573999,
+   "n_genes": 60.45
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9108928571428571,
+   "ad_cov": 0.9199999999999999,
+   "ratio": 1.0295613460575987,
+   "n_genes": 26.15
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9101785714285715,
+   "ad_cov": 0.9235714285714286,
+   "ratio": 1.018206141147721,
+   "n_genes": 26.15
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9167857142857143,
+   "ad_cov": 0.930892857142857,
+   "ratio": 0.8904319891847081,
+   "n_genes": 9.85
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.897142857142857,
+   "ad_cov": 0.8991071428571429,
+   "ratio": 0.8324217327113432,
+   "n_genes": 9.85
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.9160714285714286,
+   "ad_cov": 0.9239285714285714,
+   "ratio": 0.9106533791593335,
+   "n_genes": 12.45
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.9112500000000001,
+   "ad_cov": 0.9099999999999999,
+   "ratio": 0.8793131959397767,
+   "n_genes": 12.45
+  }
+ },
+ "hepg2->jurkat": {
+  "cell cycle|m20": {
+   "pil_cov": 0.8942857142857145,
+   "ad_cov": 0.9089285714285713,
+   "ratio": 1.0731356191683519,
+   "n_genes": 74.15
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.9101785714285716,
+   "ad_cov": 0.9126785714285715,
+   "ratio": 1.0001770620340906,
+   "n_genes": 74.15
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9262500000000001,
+   "ad_cov": 0.9332142857142856,
+   "ratio": 1.0422373566929672,
+   "n_genes": 60.1
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.8998214285714287,
+   "ad_cov": 0.9112500000000001,
+   "ratio": 1.0375226489098952,
+   "n_genes": 60.1
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9153571428571429,
+   "ad_cov": 0.9394642857142859,
+   "ratio": 0.9678481785656027,
+   "n_genes": 26.4
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9028571428571428,
+   "ad_cov": 0.9132142857142858,
+   "ratio": 0.8496844556954024,
+   "n_genes": 26.4
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9233928571428569,
+   "ad_cov": 0.9289285714285714,
+   "ratio": 0.885140670378512,
+   "n_genes": 9.6
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.908392857142857,
+   "ad_cov": 0.9126785714285715,
+   "ratio": 0.8470714628470801,
+   "n_genes": 9.6
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.9007142857142858,
+   "ad_cov": 0.9167857142857143,
+   "ratio": 1.0715436334491606,
+   "n_genes": 12.75
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.9066071428571428,
+   "ad_cov": 0.9058928571428572,
+   "ratio": 1.0320905860416432,
+   "n_genes": 12.75
+  }
+ },
+ "jurkat->ess": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9058928571428572,
+   "ad_cov": 0.9189285714285715,
+   "ratio": 1.0912065908918398,
+   "n_genes": 79.95
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8930357142857144,
+   "ad_cov": 0.8976785714285714,
+   "ratio": 1.0346648778956173,
+   "n_genes": 79.95
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9214285714285715,
+   "ad_cov": 0.9203571428571428,
+   "ratio": 1.025381205652161,
+   "n_genes": 69.25
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9130357142857143,
+   "ad_cov": 0.9125,
+   "ratio": 1.0104832248891948,
+   "n_genes": 69.25
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9325000000000001,
+   "ad_cov": 0.929464285714286,
+   "ratio": 1.034274724815889,
+   "n_genes": 22.2
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9064285714285715,
+   "ad_cov": 0.9042857142857142,
+   "ratio": 1.0013624689806144,
+   "n_genes": 22.2
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.8889097744360901,
+   "ad_cov": 0.9184210526315791,
+   "ratio": 1.0954090750759233,
+   "n_genes": 8.736842105263158
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.893045112781955,
+   "ad_cov": 0.8971804511278195,
+   "ratio": 0.9191812363785845,
+   "n_genes": 8.736842105263158
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.8746428571428572,
+   "ad_cov": 0.8717857142857142,
+   "ratio": 1.039076736289163,
+   "n_genes": 11.4
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.9098214285714284,
+   "ad_cov": 0.9128571428571428,
+   "ratio": 1.0113979922282588,
+   "n_genes": 11.4
+  }
+ },
+ "jurkat->rpe1": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9064285714285715,
+   "ad_cov": 0.9305357142857144,
+   "ratio": 0.6684906839617522,
+   "n_genes": 78.8
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8901785714285715,
+   "ad_cov": 0.9046428571428571,
+   "ratio": 0.6300848058217979,
+   "n_genes": 78.8
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9294642857142857,
+   "ad_cov": 0.9262499999999999,
+   "ratio": 1.0338217427080287,
+   "n_genes": 68.0
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9014285714285715,
+   "ad_cov": 0.9071428571428573,
+   "ratio": 1.0138785429115522,
+   "n_genes": 68.0
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9203571428571429,
+   "ad_cov": 0.9310714285714285,
+   "ratio": 1.0963639318397191,
+   "n_genes": 20.8
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.9198214285714286,
+   "ad_cov": 0.9289285714285714,
+   "ratio": 1.0707726243340419,
+   "n_genes": 20.8
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.9094642857142858,
+   "ad_cov": 0.9207142857142857,
+   "ratio": 1.0815179503642454,
+   "n_genes": 8.9
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.8901785714285715,
+   "ad_cov": 0.8955357142857144,
+   "ratio": 1.017871912724003,
+   "n_genes": 8.9
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.9167857142857143,
+   "ad_cov": 0.925,
+   "ratio": 1.0659787791628548,
+   "n_genes": 11.6
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.911785714285714,
+   "ad_cov": 0.919107142857143,
+   "ratio": 1.0711656579077653,
+   "n_genes": 11.6
+  }
+ },
+ "jurkat->hepg2": {
+  "cell cycle|m20": {
+   "pil_cov": 0.9080357142857144,
+   "ad_cov": 0.9178571428571429,
+   "ratio": 0.9342845946519749,
+   "n_genes": 77.25
+  },
+  "cell cycle|m50": {
+   "pil_cov": 0.8991071428571429,
+   "ad_cov": 0.9089285714285713,
+   "ratio": 0.9500368608873577,
+   "n_genes": 77.25
+  },
+  "ribosome biogenesis|m20": {
+   "pil_cov": 0.9033928571428573,
+   "ad_cov": 0.9046428571428571,
+   "ratio": 1.0389154951409056,
+   "n_genes": 68.0
+  },
+  "ribosome biogenesis|m50": {
+   "pil_cov": 0.9026785714285716,
+   "ad_cov": 0.9048214285714286,
+   "ratio": 1.0361060914995979,
+   "n_genes": 68.0
+  },
+  "unfolded protein response|m20": {
+   "pil_cov": 0.9153571428571429,
+   "ad_cov": 0.9124999999999999,
+   "ratio": 1.0283509205384487,
+   "n_genes": 21.1
+  },
+  "unfolded protein response|m50": {
+   "pil_cov": 0.8978571428571431,
+   "ad_cov": 0.8926785714285715,
+   "ratio": 1.0184294233837123,
+   "n_genes": 21.1
+  },
+  "p53 signalling|m20": {
+   "pil_cov": 0.8955357142857142,
+   "ad_cov": 0.908392857142857,
+   "ratio": 1.0449063673305254,
+   "n_genes": 8.75
+  },
+  "p53 signalling|m50": {
+   "pil_cov": 0.9001785714285715,
+   "ad_cov": 0.9112499999999999,
+   "ratio": 1.0301278021863411,
+   "n_genes": 8.75
+  },
+  "cholesterol biosynthesis|m20": {
+   "pil_cov": 0.9242857142857142,
+   "ad_cov": 0.9180357142857142,
+   "ratio": 0.9996453754002564,
+   "n_genes": 11.65
+  },
+  "cholesterol biosynthesis|m50": {
+   "pil_cov": 0.9166071428571427,
+   "ad_cov": 0.9230357142857141,
+   "ratio": 0.9992585601396572,
+   "n_genes": 11.65
+  }
+ }
+}
