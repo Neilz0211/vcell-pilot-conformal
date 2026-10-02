@@ -71,6 +71,10 @@ into `results/` (logs are tracked as `results/*.log`).
 | Paper figures 1-3 | `src/figures_paper.py` | `paper/figs/` |
 | Tahoe-100M pre-registered replication (Section 5.5, Appendix D) | registration `prereg/PREREG_tahoe.md` (git 6561021); on a 32-vCPU cloud CPU machine: `pod/tahoe_extract.py OUT` (downloads the CC0 DE table from Hugging Face), `pod/tahoe_compact.py OUT`, `pod/tahoe_pairs.py OUT/compact --pairs all --models core --seeds 20`, `--pairs subset100 --models ladder --seeds 10`, `--pairs all --models core --seeds 20 --dose high`, then `pod/tahoe_summary.py` and `pod/tahoe_posthoc.py` | `tahoe_*_metrics.json`, `tahoe_summary.md` (P1-P6), `tahoe_posthoc.md` (exploratory), `tahoe/` (gene pool, units, lines) |
 | STATE retrained per source line (Section 5.1, Appendix E) | on a GPU machine with `pip install arc-state`: `pod/st_prep.py` (Arc's `Replogle-Nadig-Preprint/replogle.h5ad`, GO-SVD features), `pod/st_train.sh SRC SEED STEPS` (seed 0: 20,000 steps; seeds 1-2: 8,000), `state tx predict --predict-only` (set `OMP_NUM_THREADS`), `pod/st_eval.py`, `pod/st_summary.py` | `st_eval_*.json`, `st_summary.txt` |
+| Split-half noise floor and error attribution (Section 5.4, Fig. 5, Appendix F) | on a CPU machine: `pod/pseudobulk.py RAW.h5ad OUT.h5ad --parity=0|1` for each line (Arc's `Replogle-Nadig-Preprint` single-cell files), `pod/noise_export.py genes3000.txt noise.npz` -> `data/noise.npz`; then `src/ceiling.py --seeds 20 --readout all|top100|pc10`, `src/fig_attribution.py` | `ceiling_*_metrics.json`, `ceiling_*_run20.log`, `paper/figs/fig5_attribution.pdf` |
+| Difficulty transfer (Section 5.5, Appendix F) | `src/difficulty.py --seeds 20` | `difficulty_metrics.json`, `difficulty_run20.log` |
+| Transfer signals that did not close the gap (Appendix F) | `src/transfer_measured.py --seeds 20`, `src/decision.py --seeds 3` | `transfer_measured_metrics.json`, `decision_metrics.json` |
+| Tahoe zero/few-pilot pooling (Section 5.6, Appendix D) | `pod/tahoe_zeroshot.py OUT --sources 12 --seeds 5` after the Tahoe extraction | `tahoe_zeroshot.md` |
 
 Build the paper with any LaTeX engine, for example `tectonic main.tex` inside `paper/`.
 

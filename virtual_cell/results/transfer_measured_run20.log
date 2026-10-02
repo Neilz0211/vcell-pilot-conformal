@@ -1,0 +1,13 @@
+ess->rpe1 corrAB 0.25 | m50 q mean/ridge/meas/measc/measc_s 2.33/2.29/2.26/2.16/2.38 cov 0.918/0.920/0.916/0.923/0.925 c 0.50 | excl0 meas/measc 0.051/0.002 exclbar meas/measc 0.020/0.000
+ess->hepg2 corrAB 0.26 | m50 q mean/ridge/meas/measc/measc_s 2.32/2.24/2.15/2.09/2.20 cov 0.923/0.926/0.916/0.922/0.927 c 0.51 | excl0 meas/measc 0.044/0.001 exclbar meas/measc 0.023/0.000
+ess->jurkat corrAB 0.29 | m50 q mean/ridge/meas/measc/measc_s 1.61/1.53/1.71/1.46/1.51 cov 0.912/0.917/0.910/0.917/0.914 c 0.38 | excl0 meas/measc 0.092/0.003 exclbar meas/measc 0.069/0.001
+rpe1->ess corrAB 0.24 | m50 q mean/ridge/meas/measc/measc_s 0.92/0.89/1.46/0.87/0.87 cov 0.901/0.897/0.918/0.905/0.907 c 0.17 | excl0 meas/measc 0.105/0.000 exclbar meas/measc 0.089/0.000
+rpe1->hepg2 corrAB 0.31 | m50 q mean/ridge/meas/measc/measc_s 1.45/1.36/1.59/1.32/1.40 cov 0.906/0.901/0.915/0.907/0.923 c 0.31 | excl0 meas/measc 0.097/0.001 exclbar meas/measc 0.063/0.001
+rpe1->jurkat corrAB 0.24 | m50 q mean/ridge/meas/measc/measc_s 0.96/0.96/1.53/0.94/1.02 cov 0.893/0.894/0.912/0.903/0.917 c 0.16 | excl0 meas/measc 0.094/0.001 exclbar meas/measc 0.078/0.000
+hepg2->ess corrAB 0.26 | m50 q mean/ridge/meas/measc/measc_s 0.98/0.91/1.50/0.89/0.95 cov 0.909/0.897/0.920/0.906/0.922 c 0.21 | excl0 meas/measc 0.122/0.001 exclbar meas/measc 0.109/0.000
+hepg2->rpe1 corrAB 0.31 | m50 q mean/ridge/meas/measc/measc_s 1.59/1.52/1.71/1.47/1.63 cov 0.916/0.916/0.917/0.923/0.936 c 0.38 | excl0 meas/measc 0.123/0.004 exclbar meas/measc 0.072/0.001
+hepg2->jurkat corrAB 0.24 | m50 q mean/ridge/meas/measc/measc_s 1.06/1.06/1.57/1.01/1.07 cov 0.904/0.913/0.899/0.908/0.921 c 0.19 | excl0 meas/measc 0.113/0.000 exclbar meas/measc 0.100/0.000
+jurkat->ess corrAB 0.29 | m50 q mean/ridge/meas/measc/measc_s 1.30/1.22/1.52/1.22/1.38 cov 0.895/0.900/0.909/0.907/0.927 c 0.31 | excl0 meas/measc 0.105/0.001 exclbar meas/measc 0.083/0.000
+jurkat->rpe1 corrAB 0.25 | m50 q mean/ridge/meas/measc/measc_s 2.06/2.01/2.11/1.94/2.11 cov 0.914/0.915/0.911/0.912/0.926 c 0.38 | excl0 meas/measc 0.044/0.001 exclbar meas/measc 0.018/0.000
+jurkat->hepg2 corrAB 0.23 | m50 q mean/ridge/meas/measc/measc_s 1.93/1.86/2.00/1.81/2.11 cov 0.900/0.900/0.905/0.897/0.931 c 0.33 | excl0 meas/measc 0.038/0.000 exclbar meas/measc 0.025/0.000
+TRANSFER_MEASURED_DONE

@@ -1,0 +1,13 @@
+ess->rpe1 floor 2.88 | ad ridge 12.37 ad mean 13.64 pilot 14.56 full 13.49 | floor/ad_ridge 0.23 | noise share 0.05 (genes 1.00, perts 0.97)
+ess->hepg2 floor 3.06 | ad ridge 11.55 ad mean 13.19 pilot 11.89 full 11.68 | floor/ad_ridge 0.26 | noise share 0.09 (genes 1.00, perts 0.96)
+ess->jurkat floor 2.30 | ad ridge 8.17 ad mean 9.83 pilot 8.03 full 7.94 | floor/ad_ridge 0.28 | noise share 0.09 (genes 1.00, perts 0.97)
+rpe1->ess floor 0.99 | ad ridge 5.06 ad mean 5.15 pilot 8.41 full 8.25 | floor/ad_ridge 0.20 | noise share 0.05 (genes 1.00, perts 0.99)
+rpe1->hepg2 floor 2.18 | ad ridge 7.17 ad mean 8.98 pilot 7.84 full 7.90 | floor/ad_ridge 0.30 | noise share 0.10 (genes 1.00, perts 0.95)
+rpe1->jurkat floor 1.41 | ad ridge 5.47 ad mean 4.91 pilot 8.47 full 8.32 | floor/ad_ridge 0.26 | noise share 0.07 (genes 1.00, perts 0.98)
+hepg2->ess floor 1.09 | ad ridge 5.31 ad mean 6.06 pilot 6.18 full 6.01 | floor/ad_ridge 0.21 | noise share 0.06 (genes 1.00, perts 0.99)
+hepg2->rpe1 floor 2.23 | ad ridge 8.95 ad mean 10.03 pilot 9.91 full 9.53 | floor/ad_ridge 0.25 | noise share 0.05 (genes 1.00, perts 0.97)
+hepg2->jurkat floor 1.54 | ad ridge 5.77 ad mean 5.78 pilot 6.33 full 6.12 | floor/ad_ridge 0.27 | noise share 0.08 (genes 1.00, perts 0.98)
+jurkat->ess floor 1.51 | ad ridge 7.00 ad mean 8.56 pilot 6.65 full 6.58 | floor/ad_ridge 0.22 | noise share 0.06 (genes 1.00, perts 0.99)
+jurkat->rpe1 floor 2.60 | ad ridge 10.79 ad mean 11.20 pilot 12.89 full 12.56 | floor/ad_ridge 0.24 | noise share 0.05 (genes 1.00, perts 0.97)
+jurkat->hepg2 floor 2.75 | ad ridge 9.24 ad mean 10.45 pilot 9.34 full 9.31 | floor/ad_ridge 0.30 | noise share 0.11 (genes 1.00, perts 0.90)
+CEILING_DONE

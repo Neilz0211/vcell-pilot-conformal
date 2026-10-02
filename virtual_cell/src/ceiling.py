@@ -9,7 +9,12 @@ Per directed pair, with the leak-free design of paired.py (genes and scales from
   floor     90 % quantile (conformal order statistic) of the noise RMSE over the calibration pool
   radii     pilot-only ridge, adapted ridge (Prop A, m = 50), adapted pilot mean, full-pool calibrated ridge
   noise share of the adapted-ridge residual energy: E||eps||^2 / E||Y_B - prediction||^2 on the test set
-usage: uv run python src/ceiling.py [--seeds 20]"""
+Readouts (--readout): all = the 1,000 standardised genes; top100 = the 100 genes with the largest source-train
+variance (DE-rich); pc10 = scores on the top 10 principal components of the source-train responses (programmes).
+Also reported (readout all): the noise-corrected cross-line correlation over (perturbation, gene) entries after
+centring each gene, cov(Y_A, Y_B) / sqrt((var Y_A - var eps_A)(var Y_B - var eps_B)); measurement noise is independent
+between lines, so it inflates the variances but not the covariance.
+usage: uv run python src/ceiling.py [--seeds 20] [--readout all|top100|pc10]"""
 from __future__ import annotations
 
 import argparse
@@ -41,6 +46,7 @@ def load_pair_named(A, B, compact, cache):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--seeds", type=int, default=20); ap.add_argument("--alpha", type=float, default=0.1)
+    ap.add_argument("--readout", default="all", choices=("all", "top100", "pc10"))
     a = ap.parse_args(); al = a.alpha
     compact = dict(np.load(ROOT / "data" / "nadig_compact.npz", allow_pickle=True))
     NZ = np.load(ROOT / "data" / "noise.npz", allow_pickle=True)
@@ -53,6 +59,8 @@ def main():
             Z, _, _, has = go_embedding(targets, go); YA0, YB0, Z, targets = YA0[has], YB0[has], Z[has], targets[has]; N = len(Z)
             pz = {p: i for i, p in enumerate(NZ[f"{B}_perts"])}; EPS = NZ[f"{B}_eps"].astype(np.float64)
             prow = np.array([pz.get(t, -1) for t in targets]); gcol = np.array([g3.get(g, -1) for g in gnames])
+            pza = {p: i for i, p in enumerate(NZ[f"{A}_perts"])}; EPSA = NZ[f"{A}_eps"].astype(np.float64)
+            prowa = np.array([pza.get(t, -1) for t in targets])
             raw = {}; put = lambda k, v: raw.setdefault(k, []).append(float(v))  # noqa: E731
             for s in range(a.seeds):
                 r = np.random.default_rng(s).permutation(N); tr, pool = r[: int(0.4 * N)], r[int(0.7 * N):]
@@ -63,6 +71,21 @@ def main():
                 eps[np.ix_(okr, okc)] = EPS[np.ix_(prow[okr], gcol[top][okc])] / sd[okc]
                 eps[~np.isfinite(eps)] = np.nan  # z-scores of genes with ~zero control SD in a half blow up
                 usable = np.isfinite(eps).mean(1) >= 0.95; put("noise_cov_genes", okc.mean()); put("noise_perts", usable.mean())
+                epsa = np.full_like(YA, np.nan); oka = prowa >= 0
+                epsa[np.ix_(oka, okc)] = EPSA[np.ix_(prowa[oka], gcol[top][okc])] / sd[okc]; epsa[~np.isfinite(epsa)] = np.nan
+                both = test[usable[test] & (np.isfinite(epsa[test]).mean(1) >= 0.95)]
+                if a.readout == "all" and len(both) > 50:
+                    ya = YA[both] - YA[both].mean(0); yb = YB[both] - YB[both].mean(0)
+                    cv = np.mean(ya * yb); va, vb = np.mean(ya ** 2), np.mean(yb ** 2)
+                    na, nb = np.nanmean(epsa[both] ** 2), np.nanmean(eps[both] ** 2)
+                    put("r_obs", cv / np.sqrt(va * vb)); put("r_corr", cv / np.sqrt(max(va - na, 1e-9) * max(vb - nb, 1e-9)))
+                    put("rel_A", 1 - na / va); put("rel_B", 1 - nb / vb)
+                if a.readout != "all":       # change the readout: keep a subset of genes or project onto source programmes
+                    if a.readout == "top100":
+                        T = np.eye(YA.shape[1])[:, :100]
+                    else:
+                        Yc = YA[tr] - YA[tr].mean(0); T = np.linalg.svd(Yc, full_matrices=False)[2][:10].T
+                    YA, YB = YA @ T, YB @ T; eps = np.where(np.isnan(eps), 0.0, eps) @ T
                 ne = np.sqrt(np.nanmean(eps ** 2, 1))                      # noise RMSE per perturbation
                 P = Ridge(alpha=10.0).fit(Z[tr], YA[tr]).predict(Z)
                 calu = cal[usable[cal]]
@@ -78,8 +101,9 @@ def main():
             x = {k: float(np.mean(v)) for k, v in raw.items()}; res[f"{A}->{B}"] = x
             print(f"{A}->{B} floor {x['floor']:.2f} | ad ridge {x['ad_ridge']:.2f} ad mean {x['ad_mean']:.2f} pilot {x['pil_ridge']:.2f} "
                   f"full {x['full_ridge']:.2f} | floor/ad_ridge {x['floor'] / x['ad_ridge']:.2f} | noise share {x['noise_share']:.2f} "
-                  f"(genes {x['noise_cov_genes']:.2f}, perts {x['noise_perts']:.2f})", flush=True)
-    (OUT / "ceiling_metrics.json").write_text(json.dumps(res, indent=1))
+                  f"(genes {x['noise_cov_genes']:.2f}, perts {x['noise_perts']:.2f})"
+                  + (f" | r_obs {x['r_obs']:.2f} r_corr {x['r_corr']:.2f} rel A/B {x['rel_A']:.2f}/{x['rel_B']:.2f}" if "r_obs" in x else ""), flush=True)
+    (OUT / f"ceiling_{a.readout}_metrics.json").write_text(json.dumps(res, indent=1))
     print("CEILING_DONE", flush=True)
 
 
