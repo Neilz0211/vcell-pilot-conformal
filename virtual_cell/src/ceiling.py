@@ -73,6 +73,12 @@ def main():
                 usable = np.isfinite(eps).mean(1) >= 0.95; put("noise_cov_genes", okc.mean()); put("noise_perts", usable.mean())
                 epsa = np.full_like(YA, np.nan); oka = prowa >= 0
                 epsa[np.ix_(oka, okc)] = EPSA[np.ix_(prowa[oka], gcol[top][okc])] / sd[okc]; epsa[~np.isfinite(epsa)] = np.nan
+                # like with like: genes measurable (finite noise) in >= 99 % of usable perturbations, and every quantity
+                # (floor, radii, pilots, residuals) on the same usable perturbations; remaining missing noise -> 0 (reported)
+                gm = np.isfinite(eps[usable]).mean(0) >= 0.99; put("genes_kept", gm.sum())
+                YA, YB, eps, epsa = YA[:, gm], YB[:, gm], eps[:, gm], epsa[:, gm]
+                put("nan_frac", np.isnan(eps[usable]).mean()); eps = np.where(np.isnan(eps), 0.0, eps)
+                cal, test = cal[usable[cal]], test[usable[test]]
                 both = test[usable[test] & (np.isfinite(epsa[test]).mean(1) >= 0.95)]
                 if a.readout == "all" and len(both) > 50:
                     ya = YA[both] - YA[both].mean(0); yb = YB[both] - YB[both].mean(0)
@@ -82,10 +88,10 @@ def main():
                     put("rel_A", 1 - na / va); put("rel_B", 1 - nb / vb)
                 if a.readout != "all":       # change the readout: keep a subset of genes or project onto source programmes
                     if a.readout == "top100":
-                        T = np.eye(YA.shape[1])[:, :100]
+                        T = np.eye(YA.shape[1])[:, :100]   # columns stay in descending source-train variance
                     else:
                         Yc = YA[tr] - YA[tr].mean(0); T = np.linalg.svd(Yc, full_matrices=False)[2][:10].T
-                    YA, YB = YA @ T, YB @ T; eps = np.where(np.isnan(eps), 0.0, eps) @ T
+                    YA, YB = YA @ T, YB @ T; eps = eps @ T
                 ne = np.sqrt(np.nanmean(eps ** 2, 1))                      # noise RMSE per perturbation
                 P = Ridge(alpha=10.0).fit(Z[tr], YA[tr]).predict(Z)
                 calu = cal[usable[cal]]
