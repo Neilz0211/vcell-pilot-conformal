@@ -1,0 +1,34 @@
+# Whitelist: only code, paper sources, result summaries and figures are tracked.
+# Data, model caches, environments, the TeX binary and internal planning notes stay local.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+
+!/paper/
+/paper/*
+!/paper/main.tex
+!/paper/supplementary.tex
+!/paper/references.bib
+!/paper/main.pdf
+!/paper/supplementary.pdf
+!/paper/figs/
+
+!/virtual_cell/
+/virtual_cell/*
+!/virtual_cell/pyproject.toml
+!/virtual_cell/uv.lock
+!/virtual_cell/src/
+/virtual_cell/src/__pycache__/
+!/virtual_cell/pod/
+!/virtual_cell/gears/
+/virtual_cell/gears/*
+!/virtual_cell/gears/gears_ctx.py
+!/virtual_cell/gears/pyproject.toml
+!/virtual_cell/gears/uv.lock
+!/virtual_cell/results/
+/virtual_cell/results/*
+!/virtual_cell/results/*.md
+!/virtual_cell/results/*.json
+!/virtual_cell/results/gears12/
+!/virtual_cell/figures/

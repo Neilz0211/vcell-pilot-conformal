@@ -1,0 +1,26 @@
+[project]
+name = "vc-gears"
+version = "0.0.1"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "torch>=2.7",
+  "torch_geometric",
+  "cell-gears==0.1.2",
+  "scanpy",
+  "anndata",
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "dcor",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

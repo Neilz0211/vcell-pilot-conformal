@@ -1,0 +1,762 @@
+{
+ "A1_identity": {
+  "pass": true,
+  "detail": "max relative error 1.7e-15 over 2000 instances, m in [2,40], G in [1,30]"
+ },
+ "A2_fullCP_eq_depth": {
+  "pass": true,
+  "detail": "0/378000 membership mismatches (laws gauss/heavy/ternary(ties), m in {2..50}, alpha in {.1,.2,.5})"
+ },
+ "A3_coverage": {
+  "pass": true,
+  "detail": "48 configs; all cov >= 1-alpha-3SE and (continuous laws) |cov - k/(m+1)| <= 3.5SE; min(cov-(1-alpha)) = -0.0054"
+ },
+ "A3_rows": [
+  {
+   "law": "gauss",
+   "m": 2,
+   "alpha": 0.1,
+   "k": 3,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 2,
+   "alpha": 0.5,
+   "k": 2,
+   "cov": 0.667,
+   "se": 0.0033,
+   "k_over_m1": 0.6667,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 5,
+   "alpha": 0.1,
+   "k": 6,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 5,
+   "alpha": 0.5,
+   "k": 3,
+   "cov": 0.4986,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 9,
+   "alpha": 0.1,
+   "k": 9,
+   "cov": 0.9012,
+   "se": 0.0021,
+   "k_over_m1": 0.9,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 9,
+   "alpha": 0.5,
+   "k": 5,
+   "cov": 0.4995,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 10,
+   "alpha": 0.1,
+   "k": 10,
+   "cov": 0.9081,
+   "se": 0.002,
+   "k_over_m1": 0.9091,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 10,
+   "alpha": 0.5,
+   "k": 6,
+   "cov": 0.5472,
+   "se": 0.0035,
+   "k_over_m1": 0.5455,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 20,
+   "alpha": 0.1,
+   "k": 19,
+   "cov": 0.9048,
+   "se": 0.0021,
+   "k_over_m1": 0.9048,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 20,
+   "alpha": 0.5,
+   "k": 11,
+   "cov": 0.5161,
+   "se": 0.0035,
+   "k_over_m1": 0.5238,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 50,
+   "alpha": 0.1,
+   "k": 46,
+   "cov": 0.9021,
+   "se": 0.0021,
+   "k_over_m1": 0.902,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "gauss",
+   "m": 50,
+   "alpha": 0.5,
+   "k": 26,
+   "cov": 0.5103,
+   "se": 0.0035,
+   "k_over_m1": 0.5098,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 2,
+   "alpha": 0.1,
+   "k": 3,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 2,
+   "alpha": 0.5,
+   "k": 2,
+   "cov": 0.6655,
+   "se": 0.0033,
+   "k_over_m1": 0.6667,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 5,
+   "alpha": 0.1,
+   "k": 6,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 5,
+   "alpha": 0.5,
+   "k": 3,
+   "cov": 0.4955,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 9,
+   "alpha": 0.1,
+   "k": 9,
+   "cov": 0.9024,
+   "se": 0.0021,
+   "k_over_m1": 0.9,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 9,
+   "alpha": 0.5,
+   "k": 5,
+   "cov": 0.4992,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 10,
+   "alpha": 0.1,
+   "k": 10,
+   "cov": 0.9145,
+   "se": 0.002,
+   "k_over_m1": 0.9091,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 10,
+   "alpha": 0.5,
+   "k": 6,
+   "cov": 0.5429,
+   "se": 0.0035,
+   "k_over_m1": 0.5455,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 20,
+   "alpha": 0.1,
+   "k": 19,
+   "cov": 0.903,
+   "se": 0.0021,
+   "k_over_m1": 0.9048,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 20,
+   "alpha": 0.5,
+   "k": 11,
+   "cov": 0.5296,
+   "se": 0.0035,
+   "k_over_m1": 0.5238,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 50,
+   "alpha": 0.1,
+   "k": 46,
+   "cov": 0.9022,
+   "se": 0.0021,
+   "k_over_m1": 0.902,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "heavy",
+   "m": 50,
+   "alpha": 0.5,
+   "k": 26,
+   "cov": 0.5087,
+   "se": 0.0035,
+   "k_over_m1": 0.5098,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 2,
+   "alpha": 0.1,
+   "k": 3,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 2,
+   "alpha": 0.5,
+   "k": 2,
+   "cov": 0.6723,
+   "se": 0.0033,
+   "k_over_m1": 0.6667,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 5,
+   "alpha": 0.1,
+   "k": 6,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 5,
+   "alpha": 0.5,
+   "k": 3,
+   "cov": 0.499,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 9,
+   "alpha": 0.1,
+   "k": 9,
+   "cov": 0.8972,
+   "se": 0.0021,
+   "k_over_m1": 0.9,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 9,
+   "alpha": 0.5,
+   "k": 5,
+   "cov": 0.4946,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 10,
+   "alpha": 0.1,
+   "k": 10,
+   "cov": 0.9096,
+   "se": 0.002,
+   "k_over_m1": 0.9091,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 10,
+   "alpha": 0.5,
+   "k": 6,
+   "cov": 0.5418,
+   "se": 0.0035,
+   "k_over_m1": 0.5455,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 20,
+   "alpha": 0.1,
+   "k": 19,
+   "cov": 0.903,
+   "se": 0.0021,
+   "k_over_m1": 0.9048,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 20,
+   "alpha": 0.5,
+   "k": 11,
+   "cov": 0.5201,
+   "se": 0.0035,
+   "k_over_m1": 0.5238,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 50,
+   "alpha": 0.1,
+   "k": 46,
+   "cov": 0.9027,
+   "se": 0.0021,
+   "k_over_m1": 0.902,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "t3",
+   "m": 50,
+   "alpha": 0.5,
+   "k": 26,
+   "cov": 0.515,
+   "se": 0.0035,
+   "k_over_m1": 0.5098,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 2,
+   "alpha": 0.1,
+   "k": 3,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 2,
+   "alpha": 0.5,
+   "k": 2,
+   "cov": 0.7257,
+   "se": 0.0032,
+   "k_over_m1": 0.6667,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 5,
+   "alpha": 0.1,
+   "k": 6,
+   "cov": 1.0,
+   "se": 0.0,
+   "k_over_m1": 1.0,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 5,
+   "alpha": 0.5,
+   "k": 3,
+   "cov": 0.5797,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 9,
+   "alpha": 0.1,
+   "k": 9,
+   "cov": 0.9241,
+   "se": 0.0019,
+   "k_over_m1": 0.9,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 9,
+   "alpha": 0.5,
+   "k": 5,
+   "cov": 0.5577,
+   "se": 0.0035,
+   "k_over_m1": 0.5,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 10,
+   "alpha": 0.1,
+   "k": 10,
+   "cov": 0.9224,
+   "se": 0.0019,
+   "k_over_m1": 0.9091,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 10,
+   "alpha": 0.5,
+   "k": 6,
+   "cov": 0.5819,
+   "se": 0.0035,
+   "k_over_m1": 0.5455,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 20,
+   "alpha": 0.1,
+   "k": 19,
+   "cov": 0.9239,
+   "se": 0.0019,
+   "k_over_m1": 0.9048,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 20,
+   "alpha": 0.5,
+   "k": 11,
+   "cov": 0.5595,
+   "se": 0.0035,
+   "k_over_m1": 0.5238,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 50,
+   "alpha": 0.1,
+   "k": 46,
+   "cov": 0.9216,
+   "se": 0.0019,
+   "k_over_m1": 0.902,
+   "valid": true,
+   "exact": true
+  },
+  {
+   "law": "ternary",
+   "m": 50,
+   "alpha": 0.5,
+   "k": 26,
+   "cov": 0.5401,
+   "se": 0.0035,
+   "k_over_m1": 0.5098,
+   "valid": true,
+   "exact": true
+  }
+ ],
+ "A4a_inner_ball_subset_C": {
+  "pass": true,
+  "detail": "0/162897 inner-ball probes outside C"
+ },
+ "A4b_C_subset_outer_ball": {
+  "pass": true,
+  "detail": "0/196812 members outside the outer ball; max ||u||/R_(k) seen among members = 1.4994 (bound (m+1)/m)"
+ },
+ "A4c_C_subset_minmax_union": {
+  "pass": true,
+  "detail": "0 members outside union_i Ball(b_-i, R_(k))"
+ },
+ "A4d_Rk_eq_m_over_m-1_dk": {
+  "pass": true,
+  "detail": "max rel |R_(k) - (m/(m-1)) d_(k)| = 4.2e-16"
+ },
+ "A4e_m2_sharp": {
+  "pass": true,
+  "detail": "m=2: outer radius 1.5 R_(2) attained (True), beyond it excluded (True), inner-ball boundary inside (True); R_(2)=1.0"
+ },
+ "A4f_k_eq_m+1_trivial": {
+  "pass": true,
+  "detail": "m=5, alpha=0.1: k=6=m+1, need >= 0 balls, all 50 far probes are members"
+ },
+ "B1_minmax_union_nonlinear": {
+  "pass": true,
+  "detail": "median/gauss/m=10: union 0.939 depth 0.9127; median/gauss/m=20: union 0.9317 depth 0.9095; median/heavy/m=10: union 0.9163 depth 0.9102; median/heavy/m=20: union 0.9073 depth 0.9032; trimmed/gauss/m=10: union 0.9315 depth 0.9092; trimmed/gauss/m=20: union 0.9242 depth 0.9085; trimmed/heavy/m=10: union 0.9133 depth 0.9083; trimmed/heavy/m=20: union 0.9082 depth 0.904"
+ },
+ "B1_rows": [
+  {
+   "adapter": "median",
+   "law": "gauss",
+   "m": 10,
+   "cov_minmax_union": 0.939,
+   "cov_jk_plus_depth": 0.9127,
+   "valid": 1.0
+  },
+  {
+   "adapter": "median",
+   "law": "gauss",
+   "m": 20,
+   "cov_minmax_union": 0.9317,
+   "cov_jk_plus_depth": 0.9095,
+   "valid": 1.0
+  },
+  {
+   "adapter": "median",
+   "law": "heavy",
+   "m": 10,
+   "cov_minmax_union": 0.9163,
+   "cov_jk_plus_depth": 0.9102,
+   "valid": 1.0
+  },
+  {
+   "adapter": "median",
+   "law": "heavy",
+   "m": 20,
+   "cov_minmax_union": 0.9073,
+   "cov_jk_plus_depth": 0.9032,
+   "valid": 1.0
+  },
+  {
+   "adapter": "trimmed",
+   "law": "gauss",
+   "m": 10,
+   "cov_minmax_union": 0.9315,
+   "cov_jk_plus_depth": 0.9092,
+   "valid": 1.0
+  },
+  {
+   "adapter": "trimmed",
+   "law": "gauss",
+   "m": 20,
+   "cov_minmax_union": 0.9242,
+   "cov_jk_plus_depth": 0.9085,
+   "valid": 1.0
+  },
+  {
+   "adapter": "trimmed",
+   "law": "heavy",
+   "m": 10,
+   "cov_minmax_union": 0.9133,
+   "cov_jk_plus_depth": 0.9083,
+   "valid": 1.0
+  },
+  {
+   "adapter": "trimmed",
+   "law": "heavy",
+   "m": 20,
+   "cov_minmax_union": 0.9082,
+   "cov_jk_plus_depth": 0.904,
+   "valid": 1.0
+  }
+ ],
+ "C1a_second_moment_identity": {
+  "pass": true,
+  "detail": "m=2: adapt rel err 0.006, LOO rel err 0.003; m=5: adapt rel err 0.001, LOO rel err 0.002; m=20: adapt rel err 0.000, LOO rel err 0.001; m=50: adapt rel err 0.004, LOO rel err 0.000"
+ },
+ "C1_rows": [
+  {
+   "m": 2,
+   "E_adapt_err2": 700.2606,
+   "pred": 696.0806,
+   "rel_err": 0.006,
+   "E_loo2": 931.1781,
+   "loo_pred": 928.1075,
+   "loo_rel_err": 0.0033
+  },
+  {
+   "m": 5,
+   "E_adapt_err2": 557.6099,
+   "pred": 556.8645,
+   "rel_err": 0.0013,
+   "E_loo2": 579.0359,
+   "loo_pred": 580.0672,
+   "loo_rel_err": 0.0018
+  },
+  {
+   "m": 20,
+   "E_adapt_err2": 487.1215,
+   "pred": 487.2564,
+   "rel_err": 0.0003,
+   "E_loo2": 488.2082,
+   "loo_pred": 488.4776,
+   "loo_rel_err": 0.0006
+  },
+  {
+   "m": 50,
+   "E_adapt_err2": 471.5089,
+   "pred": 473.3348,
+   "rel_err": 0.0039,
+   "E_loo2": 473.3509,
+   "loo_pred": 473.5242,
+   "loo_rel_err": 0.0004
+  }
+ ],
+ "C1b_breakeven": {
+  "pass": true,
+  "detail": "m=5: rho*_RMS=0.200, rho*_cert=0.800; m=10: rho*_RMS=0.100, rho*_cert=0.344; m=20: rho*_RMS=0.050, rho*_cert=0.161; m=50: rho*_RMS=0.020, rho*_cert=0.062; m=100: rho*_RMS=0.010, rho*_cert=0.030"
+ },
+ "C2_quantile_lemma": {
+  "pass": true,
+  "detail": "iso_G200 rho=0.085: obs 0.9698 vs RMS 0.9696 in [0.7965,1.1803] (eta=0.098, d_eff=200.0); certified gain obs -0.011 pred -0.011; iso_G200 rho=0.24: obs 0.9081 vs RMS 0.907 in [0.7439,1.1057] (eta=0.0988, d_eff=200.0); certified gain obs -0.074 pred -0.075; lowdeff_G200 rho=0.085: obs 0.9796 vs RMS 0.9696 in [0.4852,1.9376] (eta=0.333, d_eff=16.0); certified gain obs +0.002 pred -0.011; lowdeff_G200 rho=0.24: obs 0.9335 vs RMS 0.907 in [0.4558,1.8046] (eta=0.331, d_eff=16.0); certified gain obs -0.046 pred -0.075"
+ },
+ "C2_rows": [
+  {
+   "cov": "iso_G200",
+   "d_eff": 200.0,
+   "rho": 0.085,
+   "m": 50,
+   "quantile_ratio_obs": 0.9698,
+   "rms_ratio": 0.9696,
+   "eta": 0.098,
+   "bound": [
+    0.7965,
+    1.1803
+   ],
+   "in_bound": 1.0,
+   "certified_gain_obs": -0.0107,
+   "certified_gain_pred": -0.0108
+  },
+  {
+   "cov": "iso_G200",
+   "d_eff": 200.0,
+   "rho": 0.24,
+   "m": 50,
+   "quantile_ratio_obs": 0.9081,
+   "rms_ratio": 0.907,
+   "eta": 0.0988,
+   "bound": [
+    0.7439,
+    1.1057
+   ],
+   "in_bound": 1.0,
+   "certified_gain_obs": -0.0744,
+   "certified_gain_pred": -0.0747
+  },
+  {
+   "cov": "lowdeff_G200",
+   "d_eff": 16.0,
+   "rho": 0.085,
+   "m": 50,
+   "quantile_ratio_obs": 0.9796,
+   "rms_ratio": 0.9696,
+   "eta": 0.333,
+   "bound": [
+    0.4852,
+    1.9376
+   ],
+   "in_bound": 1.0,
+   "certified_gain_obs": 0.0017,
+   "certified_gain_pred": -0.0108
+  },
+  {
+   "cov": "lowdeff_G200",
+   "d_eff": 16.0,
+   "rho": 0.24,
+   "m": 50,
+   "quantile_ratio_obs": 0.9335,
+   "rms_ratio": 0.907,
+   "eta": 0.331,
+   "bound": [
+    0.4558,
+    1.8046
+   ],
+   "in_bound": 1.0,
+   "certified_gain_obs": -0.0463,
+   "certified_gain_pred": -0.0747
+  }
+ ],
+ "D1_two_point_diameter": {
+  "pass": true,
+  "detail": "ball q=1.0: cov0 0.392 cov_delta 0.011 both 0.000 valid_both=False diam/||delta||=0.67 | ball q=1.5: cov0 0.675 cov_delta 0.041 both 0.000 valid_both=False diam/||delta||=1.00 | ball q=2.15: cov0 0.901 cov_delta 0.146 both 0.122 valid_both=False diam/||delta||=1.43 | ball q=3.0: cov0 0.989 cov_delta 0.433 both 0.429 valid_both=False diam/||delta||=2.00 | ball q=5.2: cov0 1.000 cov_delta 0.981 both 0.981 valid_both=True diam/||delta||=3.47 | ball q=6.0: cov0 1.000 cov_delta 0.998 both 0.998 valid_both=True diam/||delta||=4.00 | two-ball r=2.15: cov0 0.925 cov_delta 0.925, diam 7.30 >= ||delta||=3.0, vol 29.0 < enclosing-ball vol 41.9 -> bound is on diameter, not volume"
+ },
+ "D2_ball_family_volume": {
+  "pass": true,
+  "detail": "smallest ball valid for every ||delta||<=Delta=4.0: r=5.4, vol 91.6 >= (1-alpha) vol(B_Delta) = 45.2"
+ }
+}
