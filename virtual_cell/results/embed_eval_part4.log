@@ -1,0 +1,4 @@
+jurkat->ess N=1974 | qA mean=1.455 go=1.329 esm2=1.394 geneformer=1.407 all=1.322 | covB 0.939 0.936 0.935 0.937 0.935 | inv rho 0.90 | adq 1.352 1.268 1.325 1.340 1.243 floor 0.635
+jurkat->rpe1 N=2300 | qA mean=1.449 go=1.345 esm2=1.400 geneformer=1.412 all=1.335 | covB 0.620 0.576 0.598 0.600 0.574 | inv rho 1.00 | adq 1.931 1.864 1.912 1.913 1.882 floor 0.904
+jurkat->hepg2 N=2300 | qA mean=1.450 go=1.345 esm2=1.402 geneformer=1.416 all=1.331 | covB 0.823 0.796 0.813 0.817 0.791 | inv rho 1.00 | adq 1.768 1.726 1.766 1.768 1.718 floor 0.960
+EMBED_EVAL_DONE

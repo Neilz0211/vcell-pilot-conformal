@@ -1,0 +1,13 @@
+ess->rpe1 N=1974 | qA mean=1.501 go=1.279 esm2=1.438 geneformer=1.474 all=1.270 | covB 0.533 0.468 0.521 0.528 0.465 | inv rho 1.00 | adq 2.205 2.175 2.203 2.205 2.193 floor 0.978
+ess->hepg2 N=1974 | qA mean=1.535 go=1.347 esm2=1.476 geneformer=1.493 all=1.317 | covB 0.754 0.709 0.739 0.743 0.687 | inv rho 1.00 | adq 1.771 1.664 1.752 1.770 1.679 floor 1.024
+ess->jurkat N=1974 | qA mean=1.527 go=1.335 esm2=1.456 geneformer=1.480 all=1.318 | covB 0.926 0.887 0.913 0.928 0.882 | inv rho 0.90 | adq 1.508 1.401 1.510 1.484 1.413 floor 0.856
+rpe1->ess N=1974 | qA mean=1.399 go=1.265 esm2=1.334 geneformer=1.356 all=1.261 | covB 0.978 0.959 0.973 0.978 0.955 | inv rho 0.97 | adq 0.911 0.892 0.950 0.900 0.897 floor 0.437
+rpe1->hepg2 N=2300 | qA mean=1.381 go=1.280 esm2=1.335 geneformer=1.354 all=1.269 | covB 0.912 0.912 0.905 0.908 0.906 | inv rho 0.36 | adq 1.207 1.211 1.211 1.194 1.227 floor 0.690
+rpe1->jurkat N=2300 | qA mean=1.442 go=1.310 esm2=1.380 geneformer=1.397 all=1.315 | covB 0.991 0.972 0.989 0.989 0.965 | inv rho 0.87 | adq 1.010 1.010 1.021 0.981 1.069 floor 0.605
+hepg2->ess N=1974 | qA mean=1.486 go=1.323 esm2=1.412 geneformer=1.423 all=1.300 | covB 0.984 0.977 0.979 0.979 0.975 | inv rho 0.97 | adq 0.933 0.884 0.907 0.973 0.916 floor 0.446
+hepg2->rpe1 N=2300 | qA mean=1.564 go=1.417 esm2=1.518 geneformer=1.519 all=1.388 | covB 0.871 0.824 0.856 0.856 0.817 | inv rho 0.97 | adq 1.531 1.486 1.483 1.502 1.525 floor 0.683
+hepg2->jurkat N=2300 | qA mean=1.522 go=1.378 esm2=1.466 geneformer=1.468 all=1.358 | covB 0.993 0.987 0.991 0.989 0.985 | inv rho 0.90 | adq 1.034 1.008 1.022 1.028 1.042 floor 0.626
+jurkat->ess N=1974 | qA mean=1.458 go=1.348 esm2=1.423 geneformer=1.424 all=1.355 | covB 0.946 0.952 0.948 0.950 0.957 | inv rho -0.80 | adq 1.288 1.257 1.286 1.310 1.248 floor 0.605
+jurkat->rpe1 N=2300 | qA mean=1.498 go=1.383 esm2=1.441 geneformer=1.457 all=1.372 | covB 0.615 0.559 0.586 0.595 0.561 | inv rho 0.90 | adq 1.894 1.898 1.913 1.885 1.920 floor 0.887
+jurkat->hepg2 N=2300 | qA mean=1.456 go=1.350 esm2=1.412 geneformer=1.419 all=1.334 | covB 0.813 0.783 0.799 0.797 0.775 | inv rho 0.90 | adq 1.809 1.818 1.815 1.822 1.822 floor 0.971
+EMBED_EVAL_DONE
