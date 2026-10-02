@@ -1,0 +1,13 @@
+hepg2->jurkat|s0     n=607 D2 0.121 | qA st/rg/mn 1.239/1.087/1.215 | covB st/rg/mn 0.759/0.744/0.838 | +offset st 0.830 | ad50 cov st 0.918 q st/rg/mn 1.537/1.355/1.387
+hepg2->k562|s0       n=549 D2 0.142 | qA st/rg/mn 1.317/1.201/1.321 | covB st/rg/mn 0.868/0.903/0.939 | +offset st 0.894 | ad50 cov st 0.921 q st/rg/mn 1.428/1.185/1.207
+hepg2->rpe1|s0       n=623 D2 0.375 | qA st/rg/mn 1.259/1.131/1.287 | covB st/rg/mn 0.512/0.563/0.643 | +offset st 0.735 | ad50 cov st 0.908 q st/rg/mn 1.569/1.541/1.645
+jurkat->hepg2|s0     n=607 D2 0.164 | qA st/rg/mn 1.502/1.420/1.517 | covB st/rg/mn 0.825/0.861/0.880 | +offset st 0.898 | ad50 cov st 0.923 q st/rg/mn 1.584/1.467/1.530
+jurkat->k562|s0      n=642 D2 0.081 | qA st/rg/mn 1.495/1.397/1.480 | covB st/rg/mn 0.958/0.957/0.965 | +offset st 0.964 | ad50 cov st 0.915 q st/rg/mn 1.173/1.150/1.180
+jurkat->rpe1|s0      n=693 D2 0.447 | qA st/rg/mn 1.416/1.338/1.384 | covB st/rg/mn 0.619/0.639/0.661 | +offset st 0.757 | ad50 cov st 0.895 q st/rg/mn 1.795/1.731/1.756
+k562->hepg2|s0       n=549 D2 0.345 | qA st/rg/mn 1.681/1.326/1.442 | covB st/rg/mn 0.589/0.656/0.693 | +offset st 0.702 | ad50 cov st 0.913 q st/rg/mn 2.179/1.945/1.976
+k562->jurkat|s0      n=642 D2 0.127 | qA st/rg/mn 1.617/1.168/1.286 | covB st/rg/mn 0.700/0.620/0.701 | +offset st 0.810 | ad50 cov st 0.911 q st/rg/mn 1.904/1.744/1.787
+k562->rpe1|s0        n=613 D2 1.078 | qA st/rg/mn 1.645/1.222/1.313 | covB st/rg/mn 0.424/0.422/0.452 | +offset st 0.638 | ad50 cov st 0.924 q st/rg/mn 2.273/2.170/2.190
+rpe1->hepg2|s0       n=623 D2 0.230 | qA st/rg/mn 1.500/1.204/1.331 | covB st/rg/mn 0.894/0.864/0.906 | +offset st 0.911 | ad50 cov st 0.921 q st/rg/mn 1.384/1.329/1.388
+rpe1->jurkat|s0      n=693 D2 0.202 | qA st/rg/mn 1.399/1.146/1.224 | covB st/rg/mn 0.906/0.829/0.887 | +offset st 0.937 | ad50 cov st 0.895 q st/rg/mn 1.185/1.154/1.152
+rpe1->k562|s0        n=613 D2 0.329 | qA st/rg/mn 1.502/1.214/1.299 | covB st/rg/mn 0.985/0.933/0.967 | +offset st 0.986 | ad50 cov st 0.925 q st/rg/mn 1.072/1.008/1.033
+ST_EVAL_DONE

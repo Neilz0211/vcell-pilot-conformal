@@ -131,6 +131,7 @@ def run_pair(args):
             pa("qB_oracle", split_cp_q(rmse(P[ca], YB[ca]), ALPHA))
             rho_or = rho_hat(YB[ca] - P[ca]); pa("rho_or", rho_or)
             for m in MS:
+                if m > len(pil_order): continue   # high-dose panel: calibration part can hold fewer than 100 units
                 pil = pil_order[:m]; Pp, Yp = P[pil], YB[pil]
                 q0 = split_cp_q(rmse(Pp, Yp), ALPHA); pa(f"pilot_q_{m}", q0); pa(f"pilot_cov_{m}", (st <= q0).mean())
                 R = (m + 1) / m * loo_radius_offset(Pp, Yp, ALPHA); bb = (Yp - Pp).mean(0)
@@ -140,7 +141,7 @@ def run_pair(args):
                 pa(f"rule_q_{m}", R if adapt else q0); pa(f"rule_cov_{m}", (sa <= R).mean() if adapt else (st <= q0).mean())
                 if name in ("ridge10", "mean"):
                     Mp = np.tile(Yp.mean(0), (len(te), 1))           # adapted pilot mean = pilot mean of target responses
-                    Rm = (m + 1) / m * loo_radius_offset(np.tile(mu, (m, 1)), Yp, ALPHA)
+                    Rm = (m + 1) / m * loo_radius_offset(np.tile(mu, (len(pil), 1)), Yp, ALPHA)
                     pa(f"madapted_q_{m}", Rm); pa(f"madapted_cov_{m}", (rmse(Mp, YB[te]) <= Rm).mean())
                     h = m // 2; b2 = (Yp[:h] - Pp[:h]).mean(0)
                     qs = split_cp_q(rmse(Pp[h:] + b2, Yp[h:]), ALPHA)
