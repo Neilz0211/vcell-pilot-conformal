@@ -34,7 +34,7 @@ Download into `virtual_cell/data/`:
 | `K562_gwps_normalized_bulk_01.h5ad` | figshare file 35773217 |
 | `rpe1_normalized_bulk_01.h5ad` | figshare file 35775512 |
 | HepG2 / Jurkat raw single cell | Nadig et al. 2025, GEO GSE264667 (`GSE264667_hepg2_raw_singlecell_01.h5ad`, `GSE264667_jurkat_raw_singlecell_01.h5ad`) → `pod/pseudobulk.py` → `pod/export_compact.py` gives `nadig_compact.npz` |
-| `goa_human.gaf.gz`, `go-basic.obo` | Gene Ontology (`http://current.geneontology.org`) |
+| `goa_human.gaf.gz`, `go-basic.obo` | Gene Ontology (`http://current.geneontology.org`), downloaded 2026-10-01; ontology `data-version: releases/2026-07-26`; MD5 `3d16e91814f541afc3cdb03153ae0f55` (gaf.gz), `26de643e50af9a1588f9a31062348cc4` (obo) |
 
 ## Environment
 
@@ -48,22 +48,26 @@ cd virtual_cell/gears && uv sync    # GEARS (CUDA 12.8 PyTorch)
 ## Reproducing the paper
 
 All scripts run from `virtual_cell/` as `uv run python src/<script>.py [--seeds N]`. Each writes its JSON and a log
-into `results/`.
+into `results/` (logs are tracked as `results/*.log`).
 
-| Result in the paper | Script | Summary |
+| Result in the paper | Command (from `virtual_cell/`) | Output in `results/` |
 |---|---|---|
-| Transfer matrix, controls (Table 1, Fig. 1b) | `offset_pairs.py` (K562/RPE1 pairs and same-line controls; HepG2/Jurkat pairs run on the cloud machine with `pod/run_analysis.sh`) | `transfer_matrix.md`, `offset_pairs.md`, `nadig_pairs.md` |
-| Model ladder (Fig. 1a) | `ladder.py` | `ladder_metrics.json` |
-| Calibration-transfer decomposition, same-family path, drop-RPE1 | `decomp.py` | `decomp_run20.log` |
-| Tuned GEARS | `gears/gears_ctx.py` | `gears_ctx.md` |
-| Adapt-then-calibrate, Prop. A ball | `adapt.py`, `offset_pairs.py` | `adapt_idea1.md`, `offset_pairs.md` |
-| Paired budget comparison, leak-free preprocessing | `paired.py --prep sourcetrain` | `paired.md` |
-| Pre-registered ρ̂ adapt rule | `rho_rule.py` | `rho_rule.md` |
-| Library shift | `day2.py`, `pilot.py`, `pilot2.py`, `lib_adapt.py` | `day2_natural_shift.md`, `pilot_anchored.md`, `pilot2_E1.md` |
-| Perturbation-specific readout and its audit | `specific.py`, `audit_specific.py` | `specific.md` |
-| Equivalent pilot budget | `eq_pilots.py` | `eq_pilots.md` |
-| Numerical checks of the theory | `theory_checks.py` | `theory_checks.json` |
-| Paper figures | `figures_paper.py` | `paper/figs/` |
+| Transfer matrix (Table 1, Fig. 1b, Fig. 2) | `src/offset_pairs.py --seeds 20` (K562/RPE1 pairs, same-line controls); `src/offset_pairs.py --seeds 20 --pairs rpe1:ess --out rpe1_ess_pair_metrics.json`; HepG2/Jurkat pairs on a cloud CPU machine with `pod/run_analysis.sh` and `pod/run2.sh` | `offset_pairs_metrics.json`, `nadig_pairs_metrics.json`, `matrix_pairs_metrics.json`, `rpe1_ess_pair_metrics.json`; summaries `transfer_matrix.md`, `nadig_pairs.md` |
+| HepG2/Jurkat pseudobulk | `pod/pseudobulk.py` on GEO raw files, then `pod/export_compact.py` | `data/nadig_compact.npz` (not tracked) |
+| Model ladder (Fig. 1a) | `src/ladder.py --seeds 20` | `ladder_metrics.json`, `ladder_run20.log` |
+| Decomposition, same-family path, drop-RPE1, pilot-draw spread | `src/decomp.py --seeds 20` | `decomp_metrics.json`, `decomp_run20.log` |
+| GEARS, 4 directions (sweep and tuned) | `gears/gears_ctx.py --pairs ess:rpe1,rpe1:ess,hepg2:jurkat,jurkat:hepg2 --seeds 3 [--loss mse --hidden 64 --epochs 60 --step 20 --lr 3e-3]` (from `virtual_cell/gears/`) | `gears_ctx_metrics.json`, `gears_tuned_metrics.json`, `gears_ctx.md` |
+| GEARS, 12 pairs x 10 seeds (Fig. 1a stars, Table S) | `pod/setup_gears.sh` then `pod/run_gears12.sh` on a cloud GPU; per-seed lines collected into `results/gears12/seed_lines.txt`; summary `src/gears12_summary.py` | `gears12/`, `gears12_summary.json` |
+| Adapt-then-calibrate, exact region vs outer ball | `src/adapt.py`, `src/adapt_exact.py` | `adapt_metrics.json`, `adapt_exact_metrics.json` |
+| Paired leak-free comparison, adapted pilot mean | `src/paired.py --seeds 20 --prep sourcetrain` and `--prep pooled` | `paired_*_metrics.json`, `paired.md` |
+| Low-rank adapters | `src/lowrank.py --seeds 20` | `lowrank_metrics.json`, `lowrank_run20.log` |
+| Equivalent pilot budget | `src/eq_pilots.py --seeds 20` | `eq_pilots_metrics.json`, `eq_pilots.md` |
+| Pre-registered rho-hat rule | `src/rho_rule.py --seeds 20` | `rho_rule_metrics.json`, `rho_rule.md` |
+| Library shift | `src/day2.py`, `src/pilot.py`, `src/pilot2.py`, `src/lib_adapt.py` | `day2_natural_shift.md`, `pilot_anchored.md`, `pilot2_E1.md`, `lib_adapt_run30.log` |
+| Perturbation-specific readout and audit | `src/specific.py --seeds 20`, `src/audit_specific.py`, `src/utility.py` | `specific_metrics.json`, `specific.md`, `audit_specific.log`, `utility_metrics.json` |
+| Pathway scores (Fig. 4) | `src/pathway.py --seeds 20`, `src/fig_pathway.py` | `pathway_metrics.json`, `pathway_run20.log` |
+| Numerical checks of the theory | `src/theory_checks.py` | `theory_checks.json` |
+| Paper figures 1-3 | `src/figures_paper.py` | `paper/figs/` |
 
 Build the paper with any LaTeX engine, for example `tectonic main.tex` inside `paper/`.
 

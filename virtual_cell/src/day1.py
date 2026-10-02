@@ -32,7 +32,7 @@ def weighted_quantile_cp(scores, w_cal, w_test_point, alpha):
     tot = w_cal.sum() + w_test_point
     p = w_cal / tot
     p_inf = w_test_point / tot
-    if p_inf >= alpha:  # the point mass at +inf alone exceeds alpha -> infinite quantile -> abstain
+    if p_inf > alpha:  # the point mass at +inf alone exceeds alpha -> infinite quantile -> abstain (audit: was >=, conservative at exact ties only)
         return np.inf, True
     o = np.argsort(scores)
     c = np.cumsum(p[o])

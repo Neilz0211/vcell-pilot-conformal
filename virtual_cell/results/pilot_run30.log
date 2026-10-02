@@ -1,0 +1,19 @@
+E:\clinical-wm-uncertainty\virtual_cell\src\pilot.py:83: RuntimeWarning: Mean of empty slice
+  row = {kk: float(np.nanmean(v)) for kk, v in rec.items()}
+natural_to_ess 5 {"cov_calw": 0.874, "cov_pilot": 1.0, "fin_pilot": 0.0, "q_pilot": NaN, "cov_test": 0.885, "fin_test": 0.932, "q_test": 2.168, "reject": 0.067, "cov_oracle": 0.899}
+natural_to_ess 10 {"cov_calw": 0.875, "cov_pilot": 0.917, "fin_pilot": 1.0, "q_pilot": 2.715, "cov_test": 0.88, "fin_test": 0.998, "q_test": 2.178, "reject": 0.033, "cov_oracle": 0.899}
+natural_to_ess 20 {"cov_calw": 0.868, "cov_pilot": 0.901, "fin_pilot": 1.0, "q_pilot": 2.396, "cov_test": 0.901, "fin_test": 0.999, "q_test": 2.375, "reject": 0.167, "cov_oracle": 0.896}
+natural_to_ess 50 {"cov_calw": 0.89, "cov_pilot": 0.902, "fin_pilot": 1.0, "q_pilot": 2.287, "cov_test": 0.903, "fin_test": 0.999, "q_test": 2.329, "reject": 0.133, "cov_oracle": 0.897}
+E:\clinical-wm-uncertainty\virtual_cell\src\pilot.py:83: RuntimeWarning: Mean of empty slice
+  row = {kk: float(np.nanmean(v)) for kk, v in rec.items()}
+disjoint 5 {"cov_calw": 0.74, "cov_pilot": 1.0, "fin_pilot": 0.0, "q_pilot": NaN, "cov_test": 0.832, "fin_test": 0.696, "q_test": 1.692, "reject": 0.267, "cov_oracle": 1.0}
+disjoint 10 {"cov_calw": 0.75, "cov_pilot": 0.91, "fin_pilot": 1.0, "q_pilot": 2.693, "cov_test": 0.872, "fin_test": 0.968, "q_test": 2.473, "reject": 0.4, "cov_oracle": 1.0}
+disjoint 20 {"cov_calw": 0.742, "cov_pilot": 0.901, "fin_pilot": 1.0, "q_pilot": 2.407, "cov_test": 0.893, "fin_test": 0.975, "q_test": 2.374, "reject": 0.533, "cov_oracle": 1.0}
+disjoint 50 {"cov_calw": 0.704, "cov_pilot": 0.902, "fin_pilot": 1.0, "q_pilot": 2.291, "cov_test": 0.903, "fin_test": 0.987, "q_test": 2.285, "reject": 0.767, "cov_oracle": 1.0}
+E:\clinical-wm-uncertainty\virtual_cell\src\pilot.py:83: RuntimeWarning: Mean of empty slice
+  row = {kk: float(np.nanmean(v)) for kk, v in rec.items()}
+no_shift 5 {"cov_calw": 0.907, "cov_pilot": 1.0, "fin_pilot": 0.0, "q_pilot": NaN, "cov_test": 0.909, "fin_test": 0.966, "q_test": 1.442, "reject": 0.033, "cov_oracle": 0.898}
+no_shift 10 {"cov_calw": 0.894, "cov_pilot": 0.917, "fin_pilot": 1.0, "q_pilot": 1.887, "cov_test": 0.898, "fin_test": 1.0, "q_test": 1.425, "reject": 0.033, "cov_oracle": 0.897}
+no_shift 20 {"cov_calw": 0.911, "cov_pilot": 0.914, "fin_pilot": 1.0, "q_pilot": 1.583, "cov_test": 0.914, "fin_test": 1.0, "q_test": 1.458, "reject": 0.033, "cov_oracle": 0.902}
+no_shift 50 {"cov_calw": 0.888, "cov_pilot": 0.896, "fin_pilot": 1.0, "q_pilot": 1.407, "cov_test": 0.898, "fin_test": 1.0, "q_test": 1.389, "reject": 0.033, "cov_oracle": 0.898}
+PILOT_DONE

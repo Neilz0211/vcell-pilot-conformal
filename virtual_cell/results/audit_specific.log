@@ -1,0 +1,4 @@
+== ess->rpe1, K=1
+  transfer (ridge, A->B)   certified 0.001 precision 0.75 recall 0.00 | median predicted specific 1.706 vs radius 15.124
+  insource (ridge, B->B)   certified 0.000 precision nan recall 0.00 | median predicted specific 1.899 vs radius 14.818
+  oracle s=0.3             certified 0.966 precision 0.26 recall 1.00 | median predicted specific 8.114 vs radius 0.523

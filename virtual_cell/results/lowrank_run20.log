@@ -1,0 +1,7 @@
+K562->RPE1 m=20 pilot:0.916/1.738 offset:0.913/1.527 offset_pc1:0.917/1.559 offset_pc2:0.926/1.601 offset_pc5:0.919/1.658 offset_zfeat:0.913/1.526
+K562->RPE1 m=50 pilot:0.916/1.669 offset:0.910/1.435 offset_pc1:0.911/1.423 offset_pc2:0.912/1.406 offset_pc5:0.906/1.397 offset_zfeat:0.910/1.433
+K562->RPE1 m=100 pilot:0.904/1.608 offset:0.897/1.361 offset_pc1:0.901/1.352 offset_pc2:0.902/1.350 offset_pc5:0.905/1.339 offset_zfeat:0.897/1.358
+RPE1->K562 m=20 pilot:0.882/1.604 offset:0.891/1.552 offset_pc1:0.886/1.528 offset_pc2:0.898/1.559 offset_pc5:0.894/1.597 offset_zfeat:0.891/1.551
+RPE1->K562 m=50 pilot:0.888/1.531 offset:0.888/1.432 offset_pc1:0.890/1.422 offset_pc2:0.893/1.427 offset_pc5:0.887/1.402 offset_zfeat:0.888/1.430
+RPE1->K562 m=100 pilot:0.894/1.523 offset:0.890/1.408 offset_pc1:0.892/1.404 offset_pc2:0.890/1.370 offset_pc5:0.884/1.327 offset_zfeat:0.890/1.405
+LOWRANK_DONE

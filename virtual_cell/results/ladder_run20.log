@@ -1,0 +1,34 @@
+targets with GO and a gwps embedding: 1794
+== K562->RPE1
+  ridgeGO_a1     qA 1.346 gainA  11.3%  qB 1.658 gainB   1.5%  covA 0.911  covB_src 0.753
+  knnGO_k20      qA 1.365 gainA  10.1%  qB 1.656 gainB   1.6%  covA 0.909  covB_src 0.764
+  mlpGO          qA 1.365 gainA  10.1%  qB 1.662 gainB   1.2%  covA 0.910  covB_src 0.764
+  knnGO_k5       qA 1.374 gainA   9.5%  qB 1.713 gainB  -1.9%  covA 0.903  covB_src 0.732
+  ridgeGO_a10    qA 1.391 gainA   8.4%  qB 1.628 gainB   3.2%  covA 0.907  covB_src 0.794
+  knnGO_k50      qA 1.397 gainA   8.0%  qB 1.640 gainB   2.5%  covA 0.908  covB_src 0.791
+  ridgeF_a1000   qA 1.476 gainA   2.8%  qB 1.670 gainB   0.7%  covA 0.906  covB_src 0.835
+  ridgeGO_a100   qA 1.477 gainA   2.7%  qB 1.662 gainB   1.2%  covA 0.906  covB_src 0.837
+  ridgeF_a100    qA 1.482 gainA   2.4%  qB 1.701 gainB  -1.1%  covA 0.905  covB_src 0.821
+  ridgeF_a10     qA 1.493 gainA   1.7%  qB 1.715 gainB  -2.0%  covA 0.905  covB_src 0.820
+  ridgeGO_a1000  qA 1.513 gainA   0.3%  qB 1.679 gainB   0.2%  covA 0.906  covB_src 0.850
+  mean           qA 1.518 gainA   0.0%  qB 1.682 gainB   0.0%  covA 0.907  covB_src 0.851
+  knnF_k30       qA 1.523 gainA  -0.3%  qB 1.687 gainB  -0.3%  covA 0.907  covB_src 0.846
+  knnF_k10       qA 1.531 gainA  -0.8%  qB 1.699 gainB  -1.0%  covA 0.905  covB_src 0.836
+  spearman(qA, covB_src) = 0.864
+== RPE1->K562
+  ridgeGO_a1     qA 1.288 gainA  10.7%  qB 1.625 gainB  -2.0%  covA 0.903  covB_src 0.751
+  knnGO_k20      qA 1.294 gainA  10.3%  qB 1.615 gainB  -1.4%  covA 0.906  covB_src 0.763
+  mlpGO          qA 1.303 gainA   9.7%  qB 1.639 gainB  -2.9%  covA 0.904  covB_src 0.758
+  ridgeGO_a10    qA 1.303 gainA   9.7%  qB 1.577 gainB   1.0%  covA 0.904  covB_src 0.799
+  knnGO_k50      qA 1.318 gainA   8.7%  qB 1.584 gainB   0.6%  covA 0.903  covB_src 0.803
+  knnGO_k5       qA 1.324 gainA   8.3%  qB 1.701 gainB  -6.8%  covA 0.902  covB_src 0.712
+  ridgeGO_a100   qA 1.397 gainA   3.2%  qB 1.580 gainB   0.8%  covA 0.904  covB_src 0.846
+  ridgeF_a1000   qA 1.402 gainA   2.9%  qB 1.586 gainB   0.4%  covA 0.904  covB_src 0.844
+  ridgeF_a100    qA 1.419 gainA   1.6%  qB 1.630 gainB  -2.3%  covA 0.904  covB_src 0.828
+  knnF_k30       qA 1.426 gainA   1.2%  qB 1.606 gainB  -0.8%  covA 0.905  covB_src 0.849
+  ridgeF_a10     qA 1.432 gainA   0.8%  qB 1.653 gainB  -3.8%  covA 0.904  covB_src 0.826
+  ridgeGO_a1000  qA 1.437 gainA   0.4%  qB 1.592 gainB   0.1%  covA 0.905  covB_src 0.856
+  mean           qA 1.443 gainA   0.0%  qB 1.593 gainB   0.0%  covA 0.905  covB_src 0.859
+  knnF_k10       qA 1.449 gainA  -0.4%  qB 1.634 gainB  -2.6%  covA 0.905  covB_src 0.844
+  spearman(qA, covB_src) = 0.78
+LADDER_DONE

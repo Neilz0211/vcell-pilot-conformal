@@ -1,0 +1,73 @@
+gwps perturbations with GO: 10315; essential-library targets 2086 (0.20)
+mix_cal0.20_test0.20 {"unw": 0.901, "orc": 0.901, "est": 0.899, "ess_orc": 1500.0, "ess_est": 171.985, "abst_orc": 0.0, "abst_est": 0.0, "q_unw": 1.383, "q_orc": 1.383, "err_e": 0.979, "err_ne": 0.634, "unw_sd": 0.014}
+mix_cal0.20_test0.50 {"unw": 0.826, "orc": 0.909, "est": 0.903, "ess_orc": 967.997, "ess_est": 118.149, "abst_orc": 0.0, "abst_est": 0.001, "q_unw": 1.383, "q_orc": 1.835, "err_e": 0.977, "err_ne": 0.631, "unw_sd": 0.021}
+mix_cal0.20_test0.75 {"unw": 0.759, "orc": 0.905, "est": 0.909, "ess_orc": 524.263, "ess_est": 102.306, "abst_orc": 0.0, "abst_est": 0.001, "q_unw": 1.383, "q_orc": 2.073, "err_e": 0.981, "err_ne": 0.628, "unw_sd": 0.024}
+E:\clinical-wm-uncertainty\virtual_cell\src\day2.py:93: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean(v)) if len(v) else None for k, v in out.items()} | {"unw_sd": float(np.std(out["unw"]))}
+mix_cal0.20_test1.00 {"unw": 0.694, "orc": 0.908, "est": 0.882, "ess_orc": 303.0, "ess_est": 54.14, "abst_orc": 0.0, "abst_est": 0.002, "q_unw": 1.383, "q_orc": 2.263, "err_e": 0.987, "err_ne": NaN, "unw_sd": 0.033}
+rev_cal0.75_test0.20 {"unw": 0.966, "orc": 0.901, "est": 0.898, "ess_orc": 576.861, "ess_est": 97.261, "abst_orc": 0.0, "abst_est": 0.001, "q_unw": 2.039, "q_orc": 1.374, "err_e": 0.996, "err_ne": 0.632, "unw_sd": 0.01}
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day1.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return w.sum() ** 2 / (w ** 2).sum()
+E:\clinical-wm-uncertainty\virtual_cell\src\day2.py:93: RuntimeWarning: Mean of empty slice
+  return {k: float(np.nanmean(v)) if len(v) else None for k, v in out.items()} | {"unw_sd": float(np.std(out["unw"]))}
+disj_cal0.00_test1.00 {"unw": 0.541, "orc": 1.0, "est": 0.746, "ess_orc": NaN, "ess_est": 28.385, "abst_orc": 1.0, "abst_est": 0.05, "q_unw": 1.065, "q_orc": NaN, "err_e": 0.992, "err_ne": NaN, "unw_sd": 0.022}
+lens {'mean': 1.4151066037896325, 'ridge': 1.3656860345553867, 'knn': 1.3995741316602197}
+DAY2_DONE

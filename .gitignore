@@ -30,5 +30,6 @@
 /virtual_cell/results/*
 !/virtual_cell/results/*.md
 !/virtual_cell/results/*.json
+!/virtual_cell/results/*.log
 !/virtual_cell/results/gears12/
 !/virtual_cell/figures/

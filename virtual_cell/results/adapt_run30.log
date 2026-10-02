@@ -1,0 +1,9 @@
+K562->RPE1 m=10 ridge_pilot:0.909/1.83 ridge_offset:0.916/1.69 ridge_affine:0.916/1.69 ridge_pmean:0.918/1.77 mean_pilot:0.914/1.90 mean_offset:0.918/1.77 mean_affine:0.918/1.77
+K562->RPE1 m=20 ridge_pilot:0.911/1.71 ridge_offset:0.911/1.50 ridge_affine:0.911/1.49 ridge_pmean:0.909/1.56 mean_pilot:0.910/1.76 mean_offset:0.909/1.56 mean_affine:0.909/1.56
+K562->RPE1 m=50 ridge_pilot:0.910/1.65 ridge_offset:0.908/1.42 ridge_affine:0.908/1.41 ridge_pmean:0.907/1.47 mean_pilot:0.910/1.69 mean_offset:0.907/1.47 mean_affine:0.907/1.47
+K562->RPE1 m=100 ridge_pilot:0.904/1.61 ridge_offset:0.899/1.36 ridge_affine:0.902/1.35 ridge_pmean:0.902/1.43 mean_pilot:0.904/1.66 mean_offset:0.902/1.43 mean_affine:0.902/1.43
+RPE1->K562 m=10 ridge_pilot:0.890/1.72 ridge_offset:0.888/1.67 ridge_affine:0.888/1.66 ridge_pmean:0.894/1.73 mean_pilot:0.894/1.76 mean_offset:0.894/1.73 mean_affine:0.894/1.73
+RPE1->K562 m=20 ridge_pilot:0.889/1.61 ridge_offset:0.887/1.52 ridge_affine:0.885/1.52 ridge_pmean:0.884/1.58 mean_pilot:0.883/1.61 mean_offset:0.884/1.58 mean_affine:0.884/1.58
+RPE1->K562 m=50 ridge_pilot:0.891/1.54 ridge_offset:0.887/1.42 ridge_affine:0.887/1.41 ridge_pmean:0.893/1.50 mean_pilot:0.890/1.55 mean_offset:0.893/1.50 mean_affine:0.893/1.50
+RPE1->K562 m=100 ridge_pilot:0.896/1.53 ridge_offset:0.892/1.41 ridge_affine:0.892/1.39 ridge_pmean:0.895/1.48 mean_pilot:0.895/1.54 mean_offset:0.895/1.48 mean_affine:0.895/1.48
+ADAPT_DONE

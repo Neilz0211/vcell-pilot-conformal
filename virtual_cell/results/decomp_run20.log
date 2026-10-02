@@ -1,0 +1,129 @@
+== ess->rpe1 (N=1978)
+  mean         srcRMSE 0.892 tgtRMSE 0.977 qA 1.493 qB 1.650 qB/qA 1.106 covB 0.853 cov@commonR 0.853
+  ridge_a1000  srcRMSE 0.890 tgtRMSE 0.976 qA 1.488 qB 1.648 qB/qA 1.107 covB 0.852 cov@commonR 0.854
+  ridge_a100   srcRMSE 0.876 tgtRMSE 0.970 qA 1.454 qB 1.634 qB/qA 1.125 covB 0.837 cov@commonR 0.858
+  ridge_a10    srcRMSE 0.838 tgtRMSE 0.967 qA 1.345 qB 1.601 qB/qA 1.191 covB 0.787 cov@commonR 0.863
+  ridge_a1     srcRMSE 0.833 tgtRMSE 0.995 qA 1.299 qB 1.639 qB/qA 1.263 covB 0.745 cov@commonR 0.846
+  knn20        srcRMSE 0.831 tgtRMSE 0.987 qA 1.314 qB 1.633 qB/qA 1.244 covB 0.756 cov@commonR 0.849
+  pilots m=20: pilot cov 0.915 [p5 0.804, p95 0.980] radius sd 0.250 | adapted cov 0.928 [p5 0.859, p95 0.988] radius sd 0.280
+  pilots m=50: pilot cov 0.916 [p5 0.872, p95 0.959] radius sd 0.168 | adapted cov 0.919 [p5 0.866, p95 0.965] radius sd 0.220
+== ess->hepg2 (N=1978)
+  mean         srcRMSE 0.890 tgtRMSE 0.921 qA 1.504 qB 1.635 qB/qA 1.087 covB 0.867 cov@commonR 0.867
+  ridge_a1000  srcRMSE 0.888 tgtRMSE 0.920 qA 1.500 qB 1.631 qB/qA 1.088 covB 0.867 cov@commonR 0.868
+  ridge_a100   srcRMSE 0.873 tgtRMSE 0.911 qA 1.465 qB 1.603 qB/qA 1.095 covB 0.862 cov@commonR 0.873
+  ridge_a10    srcRMSE 0.833 tgtRMSE 0.899 qA 1.343 qB 1.535 qB/qA 1.144 covB 0.845 cov@commonR 0.891
+  ridge_a1     srcRMSE 0.827 tgtRMSE 0.923 qA 1.293 qB 1.515 qB/qA 1.173 covB 0.828 cov@commonR 0.896
+  knn20        srcRMSE 0.823 tgtRMSE 0.912 qA 1.313 qB 1.518 qB/qA 1.157 covB 0.839 cov@commonR 0.894
+  pilots m=20: pilot cov 0.935 [p5 0.848, p95 0.988] radius sd 0.304 | adapted cov 0.948 [p5 0.868, p95 0.988] radius sd 0.302
+  pilots m=50: pilot cov 0.908 [p5 0.844, p95 0.966] radius sd 0.181 | adapted cov 0.919 [p5 0.866, p95 0.972] radius sd 0.167
+== ess->jurkat (N=1978)
+  mean         srcRMSE 0.883 tgtRMSE 0.913 qA 1.533 qB 1.493 qB/qA 0.975 covB 0.912 cov@commonR 0.912
+  ridge_a1000  srcRMSE 0.880 tgtRMSE 0.911 qA 1.527 qB 1.488 qB/qA 0.975 covB 0.911 cov@commonR 0.912
+  ridge_a100   srcRMSE 0.864 tgtRMSE 0.900 qA 1.484 qB 1.463 qB/qA 0.986 covB 0.907 cov@commonR 0.916
+  ridge_a10    srcRMSE 0.820 tgtRMSE 0.880 qA 1.363 qB 1.390 qB/qA 1.021 covB 0.894 cov@commonR 0.930
+  ridge_a1     srcRMSE 0.813 tgtRMSE 0.906 qA 1.291 qB 1.391 qB/qA 1.078 covB 0.865 cov@commonR 0.934
+  knn20        srcRMSE 0.808 tgtRMSE 0.896 qA 1.320 qB 1.392 qB/qA 1.056 covB 0.878 cov@commonR 0.931
+  pilots m=20: pilot cov 0.901 [p5 0.794, p95 0.980] radius sd 0.252 | adapted cov 0.916 [p5 0.823, p95 0.980] radius sd 0.262
+  pilots m=50: pilot cov 0.904 [p5 0.849, p95 0.948] radius sd 0.134 | adapted cov 0.913 [p5 0.867, p95 0.952] radius sd 0.138
+== rpe1->ess (N=1978)
+  mean         srcRMSE 0.910 tgtRMSE 1.041 qA 1.417 qB 1.548 qB/qA 1.093 covB 0.857 cov@commonR 0.857
+  ridge_a1000  srcRMSE 0.907 tgtRMSE 1.040 qA 1.410 qB 1.547 qB/qA 1.098 covB 0.855 cov@commonR 0.858
+  ridge_a100   srcRMSE 0.889 tgtRMSE 1.033 qA 1.370 qB 1.539 qB/qA 1.124 covB 0.838 cov@commonR 0.859
+  ridge_a10    srcRMSE 0.837 tgtRMSE 1.023 qA 1.273 qB 1.541 qB/qA 1.211 covB 0.794 cov@commonR 0.859
+  ridge_a1     srcRMSE 0.821 tgtRMSE 1.046 qA 1.263 qB 1.589 qB/qA 1.258 covB 0.755 cov@commonR 0.836
+  knn20        srcRMSE 0.821 tgtRMSE 1.040 qA 1.263 qB 1.574 qB/qA 1.246 covB 0.760 cov@commonR 0.840
+  pilots m=20: pilot cov 0.882 [p5 0.705, p95 0.974] radius sd 0.306 | adapted cov 0.904 [p5 0.778, p95 0.980] radius sd 0.332
+  pilots m=50: pilot cov 0.884 [p5 0.784, p95 0.952] radius sd 0.179 | adapted cov 0.893 [p5 0.811, p95 0.958] radius sd 0.173
+== rpe1->hepg2 (N=2305)
+  mean         srcRMSE 0.907 tgtRMSE 0.985 qA 1.419 qB 1.544 qB/qA 1.088 covB 0.873 cov@commonR 0.873
+  ridge_a1000  srcRMSE 0.905 tgtRMSE 0.984 qA 1.414 qB 1.541 qB/qA 1.091 covB 0.872 cov@commonR 0.874
+  ridge_a100   srcRMSE 0.888 tgtRMSE 0.975 qA 1.378 qB 1.523 qB/qA 1.106 covB 0.866 cov@commonR 0.876
+  ridge_a10    srcRMSE 0.844 tgtRMSE 0.958 qA 1.294 qB 1.485 qB/qA 1.149 covB 0.853 cov@commonR 0.885
+  ridge_a1     srcRMSE 0.833 tgtRMSE 0.971 qA 1.281 qB 1.471 qB/qA 1.149 covB 0.842 cov@commonR 0.887
+  knn20        srcRMSE 0.829 tgtRMSE 0.963 qA 1.288 qB 1.473 qB/qA 1.144 covB 0.845 cov@commonR 0.889
+  pilots m=20: pilot cov 0.915 [p5 0.815, p95 0.993] radius sd 0.350 | adapted cov 0.927 [p5 0.800, p95 0.993] radius sd 0.380
+  pilots m=50: pilot cov 0.893 [p5 0.829, p95 0.947] radius sd 0.177 | adapted cov 0.901 [p5 0.859, p95 0.955] radius sd 0.165
+== rpe1->jurkat (N=2305)
+  mean         srcRMSE 0.910 tgtRMSE 1.041 qA 1.418 qB 1.513 qB/qA 1.068 covB 0.873 cov@commonR 0.873
+  ridge_a1000  srcRMSE 0.908 tgtRMSE 1.040 qA 1.413 qB 1.512 qB/qA 1.071 covB 0.872 cov@commonR 0.873
+  ridge_a100   srcRMSE 0.891 tgtRMSE 1.035 qA 1.380 qB 1.512 qB/qA 1.096 covB 0.859 cov@commonR 0.872
+  ridge_a10    srcRMSE 0.846 tgtRMSE 1.035 qA 1.290 qB 1.522 qB/qA 1.181 covB 0.788 cov@commonR 0.861
+  ridge_a1     srcRMSE 0.835 tgtRMSE 1.065 qA 1.270 qB 1.587 qB/qA 1.251 covB 0.738 cov@commonR 0.829
+  knn20        srcRMSE 0.831 tgtRMSE 1.052 qA 1.282 qB 1.578 qB/qA 1.232 covB 0.759 cov@commonR 0.834
+  pilots m=20: pilot cov 0.914 [p5 0.836, p95 0.964] radius sd 0.194 | adapted cov 0.928 [p5 0.850, p95 0.975] radius sd 0.241
+  pilots m=50: pilot cov 0.891 [p5 0.833, p95 0.946] radius sd 0.125 | adapted cov 0.898 [p5 0.837, p95 0.948] radius sd 0.144
+== hepg2->ess (N=1978)
+  mean         srcRMSE 0.902 tgtRMSE 0.939 qA 1.542 qB 1.523 qB/qA 0.988 covB 0.905 cov@commonR 0.905
+  ridge_a1000  srcRMSE 0.900 tgtRMSE 0.938 qA 1.538 qB 1.520 qB/qA 0.989 covB 0.905 cov@commonR 0.906
+  ridge_a100   srcRMSE 0.884 tgtRMSE 0.927 qA 1.502 qB 1.500 qB/qA 0.999 covB 0.900 cov@commonR 0.912
+  ridge_a10    srcRMSE 0.838 tgtRMSE 0.909 qA 1.368 qB 1.445 qB/qA 1.056 covB 0.878 cov@commonR 0.923
+  ridge_a1     srcRMSE 0.828 tgtRMSE 0.931 qA 1.300 qB 1.466 qB/qA 1.128 covB 0.844 cov@commonR 0.923
+  knn20        srcRMSE 0.823 tgtRMSE 0.916 qA 1.332 qB 1.464 qB/qA 1.100 covB 0.853 cov@commonR 0.922
+  pilots m=20: pilot cov 0.894 [p5 0.783, p95 0.984] radius sd 0.323 | adapted cov 0.914 [p5 0.813, p95 0.990] radius sd 0.325
+  pilots m=50: pilot cov 0.890 [p5 0.819, p95 0.944] radius sd 0.146 | adapted cov 0.899 [p5 0.839, p95 0.962] radius sd 0.134
+== hepg2->rpe1 (N=2305)
+  mean         srcRMSE 0.901 tgtRMSE 0.941 qA 1.533 qB 1.548 qB/qA 1.010 covB 0.899 cov@commonR 0.899
+  ridge_a1000  srcRMSE 0.898 tgtRMSE 0.940 qA 1.529 qB 1.546 qB/qA 1.012 covB 0.898 cov@commonR 0.900
+  ridge_a100   srcRMSE 0.884 tgtRMSE 0.932 qA 1.497 qB 1.522 qB/qA 1.017 covB 0.894 cov@commonR 0.905
+  ridge_a10    srcRMSE 0.845 tgtRMSE 0.918 qA 1.377 qB 1.474 qB/qA 1.071 covB 0.861 cov@commonR 0.921
+  ridge_a1     srcRMSE 0.838 tgtRMSE 0.936 qA 1.313 qB 1.476 qB/qA 1.125 covB 0.830 cov@commonR 0.922
+  knn20        srcRMSE 0.833 tgtRMSE 0.932 qA 1.334 qB 1.488 qB/qA 1.116 covB 0.832 cov@commonR 0.918
+  pilots m=20: pilot cov 0.916 [p5 0.793, p95 0.985] radius sd 0.254 | adapted cov 0.930 [p5 0.867, p95 0.990] radius sd 0.262
+  pilots m=50: pilot cov 0.901 [p5 0.839, p95 0.958] radius sd 0.131 | adapted cov 0.913 [p5 0.855, p95 0.961] radius sd 0.140
+== hepg2->jurkat (N=2305)
+  mean         srcRMSE 0.899 tgtRMSE 0.947 qA 1.562 qB 1.474 qB/qA 0.944 covB 0.921 cov@commonR 0.921
+  ridge_a1000  srcRMSE 0.897 tgtRMSE 0.946 qA 1.558 qB 1.471 qB/qA 0.945 covB 0.920 cov@commonR 0.922
+  ridge_a100   srcRMSE 0.882 tgtRMSE 0.939 qA 1.519 qB 1.453 qB/qA 0.957 covB 0.916 cov@commonR 0.926
+  ridge_a10    srcRMSE 0.843 tgtRMSE 0.934 qA 1.386 qB 1.435 qB/qA 1.036 covB 0.882 cov@commonR 0.933
+  ridge_a1     srcRMSE 0.837 tgtRMSE 0.963 qA 1.309 qB 1.504 qB/qA 1.150 covB 0.828 cov@commonR 0.918
+  knn20        srcRMSE 0.830 tgtRMSE 0.951 qA 1.329 qB 1.509 qB/qA 1.137 covB 0.842 cov@commonR 0.916
+  pilots m=20: pilot cov 0.924 [p5 0.861, p95 0.978] radius sd 0.215 | adapted cov 0.942 [p5 0.887, p95 0.982] radius sd 0.225
+  pilots m=50: pilot cov 0.897 [p5 0.827, p95 0.946] radius sd 0.147 | adapted cov 0.903 [p5 0.845, p95 0.951] radius sd 0.158
+== jurkat->ess (N=1978)
+  mean         srcRMSE 0.897 tgtRMSE 0.906 qA 1.455 qB 1.551 qB/qA 1.067 covB 0.874 cov@commonR 0.874
+  ridge_a1000  srcRMSE 0.895 tgtRMSE 0.904 qA 1.451 qB 1.548 qB/qA 1.068 covB 0.875 cov@commonR 0.876
+  ridge_a100   srcRMSE 0.881 tgtRMSE 0.894 qA 1.419 qB 1.516 qB/qA 1.069 covB 0.874 cov@commonR 0.884
+  ridge_a10    srcRMSE 0.844 tgtRMSE 0.872 qA 1.329 qB 1.438 qB/qA 1.083 covB 0.872 cov@commonR 0.906
+  ridge_a1     srcRMSE 0.845 tgtRMSE 0.887 qA 1.305 qB 1.411 qB/qA 1.082 covB 0.871 cov@commonR 0.913
+  knn20        srcRMSE 0.841 tgtRMSE 0.880 qA 1.318 qB 1.406 qB/qA 1.068 covB 0.872 cov@commonR 0.912
+  pilots m=20: pilot cov 0.893 [p5 0.776, p95 0.982] radius sd 0.350 | adapted cov 0.914 [p5 0.797, p95 0.988] radius sd 0.352
+  pilots m=50: pilot cov 0.895 [p5 0.811, p95 0.944] radius sd 0.158 | adapted cov 0.902 [p5 0.843, p95 0.946] radius sd 0.147
+== jurkat->rpe1 (N=2305)
+  mean         srcRMSE 0.903 tgtRMSE 0.985 qA 1.447 qB 1.636 qB/qA 1.131 covB 0.823 cov@commonR 0.823
+  ridge_a1000  srcRMSE 0.901 tgtRMSE 0.984 qA 1.444 qB 1.634 qB/qA 1.132 covB 0.821 cov@commonR 0.823
+  ridge_a100   srcRMSE 0.890 tgtRMSE 0.980 qA 1.424 qB 1.623 qB/qA 1.140 covB 0.815 cov@commonR 0.826
+  ridge_a10    srcRMSE 0.863 tgtRMSE 0.979 qA 1.365 qB 1.608 qB/qA 1.179 covB 0.787 cov@commonR 0.825
+  ridge_a1     srcRMSE 0.867 tgtRMSE 1.005 qA 1.351 qB 1.630 qB/qA 1.207 covB 0.773 cov@commonR 0.818
+  knn20        srcRMSE 0.867 tgtRMSE 1.002 qA 1.355 qB 1.626 qB/qA 1.201 covB 0.773 cov@commonR 0.814
+  pilots m=20: pilot cov 0.926 [p5 0.834, p95 0.972] radius sd 0.210 | adapted cov 0.936 [p5 0.879, p95 0.985] radius sd 0.271
+  pilots m=50: pilot cov 0.897 [p5 0.834, p95 0.968] radius sd 0.160 | adapted cov 0.912 [p5 0.839, p95 0.963] radius sd 0.163
+== jurkat->hepg2 (N=2305)
+  mean         srcRMSE 0.905 tgtRMSE 0.924 qA 1.441 qB 1.641 qB/qA 1.139 covB 0.861 cov@commonR 0.861
+  ridge_a1000  srcRMSE 0.903 tgtRMSE 0.923 qA 1.438 qB 1.638 qB/qA 1.140 covB 0.860 cov@commonR 0.861
+  ridge_a100   srcRMSE 0.892 tgtRMSE 0.917 qA 1.410 qB 1.619 qB/qA 1.149 covB 0.856 cov@commonR 0.863
+  ridge_a10    srcRMSE 0.863 tgtRMSE 0.910 qA 1.354 qB 1.572 qB/qA 1.162 covB 0.848 cov@commonR 0.872
+  ridge_a1     srcRMSE 0.865 tgtRMSE 0.932 qA 1.336 qB 1.559 qB/qA 1.168 covB 0.842 cov@commonR 0.876
+  knn20        srcRMSE 0.867 tgtRMSE 0.930 qA 1.350 qB 1.566 qB/qA 1.161 covB 0.848 cov@commonR 0.876
+  pilots m=20: pilot cov 0.913 [p5 0.851, p95 0.987] radius sd 0.318 | adapted cov 0.924 [p5 0.865, p95 0.990] radius sd 0.325
+  pilots m=50: pilot cov 0.896 [p5 0.817, p95 0.959] radius sd 0.186 | adapted cov 0.904 [p5 0.839, p95 0.965] radius sd 0.171
+== ess->gwps (N=1976)
+  mean         srcRMSE 0.878 tgtRMSE 0.865 qA 1.552 qB 1.564 qB/qA 1.008 covB 0.901 cov@commonR 0.901
+  ridge_a1000  srcRMSE 0.876 tgtRMSE 0.863 qA 1.546 qB 1.561 qB/qA 1.010 covB 0.901 cov@commonR 0.902
+  ridge_a100   srcRMSE 0.859 tgtRMSE 0.848 qA 1.502 qB 1.534 qB/qA 1.021 covB 0.898 cov@commonR 0.908
+  ridge_a10    srcRMSE 0.812 tgtRMSE 0.816 qA 1.371 qB 1.431 qB/qA 1.043 covB 0.892 cov@commonR 0.928
+  ridge_a1     srcRMSE 0.803 tgtRMSE 0.828 qA 1.291 qB 1.396 qB/qA 1.081 covB 0.879 cov@commonR 0.934
+  knn20        srcRMSE 0.800 tgtRMSE 0.822 qA 1.329 qB 1.415 qB/qA 1.065 covB 0.882 cov@commonR 0.933
+  pilots m=20: pilot cov 0.890 [p5 0.832, p95 0.946] radius sd 0.241 | adapted cov 0.907 [p5 0.853, p95 0.954] radius sd 0.245
+  pilots m=50: pilot cov 0.898 [p5 0.857, p95 0.938] radius sd 0.141 | adapted cov 0.905 [p5 0.869, p95 0.942] radius sd 0.141
+== gwps->ess (N=1976)
+  mean         srcRMSE 0.868 tgtRMSE 0.891 qA 1.545 qB 1.547 qB/qA 1.002 covB 0.910 cov@commonR 0.910
+  ridge_a1000  srcRMSE 0.865 tgtRMSE 0.889 qA 1.542 qB 1.542 qB/qA 1.000 covB 0.911 cov@commonR 0.912
+  ridge_a100   srcRMSE 0.848 tgtRMSE 0.873 qA 1.508 qB 1.503 qB/qA 0.997 covB 0.911 cov@commonR 0.920
+  ridge_a10    srcRMSE 0.808 tgtRMSE 0.835 qA 1.405 qB 1.399 qB/qA 0.996 covB 0.905 cov@commonR 0.939
+  ridge_a1     srcRMSE 0.809 tgtRMSE 0.835 qA 1.368 qB 1.335 qB/qA 0.977 covB 0.910 cov@commonR 0.950
+  knn20        srcRMSE 0.802 tgtRMSE 0.828 qA 1.379 qB 1.351 qB/qA 0.980 covB 0.910 cov@commonR 0.946
+  pilots m=20: pilot cov 0.905 [p5 0.843, p95 0.974] radius sd 0.203 | adapted cov 0.920 [p5 0.876, p95 0.978] radius sd 0.192
+  pilots m=50: pilot cov 0.906 [p5 0.876, p95 0.942] radius sd 0.106 | adapted cov 0.914 [p5 0.884, p95 0.958] radius sd 0.109
+SENS all 12: ridge10 covers less than mean in 12/12; per-pair Spearman(qA, covB) over 6 models: median 1.00, min 0.89
+SENS no RPE1 (6): ridge10 covers less than mean in 6/6; per-pair Spearman(qA, covB) over 6 models: median 1.00, min 0.89
+DECOMP_DONE

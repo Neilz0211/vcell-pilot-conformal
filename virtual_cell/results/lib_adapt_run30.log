@@ -1,0 +1,4 @@
+natural_to_ess Delta2=0.069 src_cov=0.674 src_q=1.360 pilot_m20_cov=0.919 pilot_m20_q=2.622 exact_m20_cov=0.934 exact_m20_q=2.686 pilot_m50_cov=0.911 pilot_m50_q=2.420 exact_m50_cov=0.917 exact_m50_q=2.390 pilot_m100_cov=0.900 pilot_m100_q=2.272 exact_m100_cov=0.903 exact_m100_q=2.208
+disjoint Delta2=0.096 src_cov=0.541 src_q=1.065 pilot_m20_cov=0.913 pilot_m20_q=2.494 exact_m20_cov=0.926 exact_m20_q=2.570 pilot_m50_cov=0.910 pilot_m50_q=2.345 exact_m50_cov=0.917 exact_m50_q=2.324 pilot_m100_cov=0.908 pilot_m100_q=2.268 exact_m100_cov=0.909 exact_m100_q=2.198
+no_shift Delta2=0.002 src_cov=0.897 src_q=1.360 pilot_m20_cov=0.915 pilot_m20_q=1.662 exact_m20_cov=0.925 exact_m20_q=1.755 pilot_m50_cov=0.902 pilot_m50_q=1.483 exact_m50_cov=0.906 exact_m50_q=1.516 pilot_m100_cov=0.900 pilot_m100_q=1.422 exact_m100_cov=0.903 exact_m100_q=1.437
+LIB_ADAPT_DONE
