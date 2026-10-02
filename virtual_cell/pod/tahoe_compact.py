@@ -66,18 +66,18 @@ fps = {}
 for d, smi in zip(D.drug, D.canonical_smiles):
     m = Chem.MolFromSmiles(smi) if isinstance(smi, str) else None
     if m is not None:
-        fps[d] = gen.GetFingerprintAsNumPy(m).astype(bool)
+        fps[d.strip()] = gen.GetFingerprintAsNumPy(m).astype(bool)
 drugs = sorted(fps); FP = np.array([fps[d] for d in drugs])
 svd = TruncatedSVD(64, random_state=0).fit(FP / np.maximum(np.linalg.norm(FP, axis=1, keepdims=True), 1e-8))
 emb = dict(zip(drugs, svd.transform(FP / np.maximum(np.linalg.norm(FP, axis=1, keepdims=True), 1e-8))))
-has = np.array([d in fps for d in U.drug])
+has = np.array([d.strip() in fps for d in U.drug])  # drug names in the DE table can carry trailing spaces
 Z = np.full((len(U), 65), np.nan, np.float32); F = np.zeros((len(U), 2048), bool)
 for i, (d, c) in enumerate(zip(U.drug, U.concentration)):
-    if d in fps:
-        Z[i, :64] = emb[d]; Z[i, 64] = np.log10(c); F[i] = fps[d]
+    if d.strip() in fps:
+        Z[i, :64] = emb[d.strip()]; Z[i, 64] = np.log10(c); F[i] = fps[d.strip()]
 np.save(out + "/Z.npy", Z); np.save(out + "/fp.npy", F); np.save(out + "/has_fp.npy", has)
 rep = {"lines": len(li), "units": len(ui), "drugs": int(U.drug.nunique()), "units_without_fp": int((~has).sum()),
-       "drugs_without_fp": sorted(set(U.drug[~has])), "genes_passing": int(ok.sum()), "pool": len(pool),
+       "drugs_without_fp": sorted(set(U.drug[~has])), "smiles_unparsed": sorted(set(D.drug) - set(fps)), "genes_passing": int(ok.sum()), "pool": len(pool),
        "present_blocks": int(present.sum())}
 json.dump(rep, open(out + "/report.json", "w"), indent=1); print(rep, flush=True)
 print("COMPACT_DONE", flush=True)

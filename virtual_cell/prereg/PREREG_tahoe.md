@@ -61,3 +61,16 @@ plate x drug x dose x cell line against that plate's DMSO wells. 50 cancer cell 
 - Secondary "source-active" panel: units whose source-line RMS LFC exceeds the source median.
 
 A failed P1 or P3 is reported as a scope limitation of the paper's claims, not re-analysed until it passes.
+
+## Amendment 1 (2026-10-02, before any P1-P6 statistic was computed)
+
+- Drug names in the DE table can carry trailing spaces; names are stripped before matching SMILES.
+- Two drugs have no parseable single SMILES (Sacubitril/Valsartan, a combination, and Verteporfin): their 6 units
+  (0.5%) are dropped. The target-annotation fallback was not implemented.
+- Seen before this amendment: a 3-pair, 2-seed smoke test of the pipeline (pairs A-172 -> C-33 A, HCT15, J82), used
+  only to check that the code runs.
+
+## Not pre-registered
+
+The STATE comparison on Replogle-Nadig (`pod/st_*.py`) was added the same night at the owner's request and is
+exploratory.
