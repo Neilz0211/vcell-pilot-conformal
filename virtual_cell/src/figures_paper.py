@@ -37,15 +37,14 @@ def pairs():
 
 def fig1():
     L = json.loads((R / "ladder_metrics.json").read_text())
-    G = json.loads((R / "gears_tuned_metrics.json").read_text())
+    G12 = json.loads((R / "gears12_summary.json").read_text())  # 12 directed pairs x 10 seeds
     fig, ax = plt.subplots(1, 2, figsize=(7.0, 2.7))
     for d, mk in (("K562->RPE1", "o"), ("RPE1->K562", "s")):
         for n, v in L[d].items():
             c = "k" if n == "mean" else ("C0" if "GO" in n else "C7")
             ax[0].scatter(v["gainA_pct"], v["covB_src"] - L[d]["mean"]["covB_src"], c=c, marker=mk, s=14, alpha=.8, lw=0)
-    for k, v in G.items():
-        g, m = v["gears"], v["mean"]
-        ax[0].scatter(100 * (m["qA"] - g["qA"]) / m["qA"], g["covB_src"] - m["covB_src"], c="C3", marker="*", s=60, zorder=5)
+    for k, v in G12.items():
+        ax[0].scatter(100 * (v["mqA"] - v["gqA"]) / v["mqA"], v["gcov"] - v["mcov"], c="C3", marker="*", s=45, zorder=5)
     ax[0].axhline(0, ls="--", c="gray", lw=.8)
     ax[0].set_xlabel("source-line radius gain over predict-the-mean (%)")
     ax[0].set_ylabel("coverage minus predict-the-mean\n(same transfer pair)")
