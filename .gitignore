@@ -1,25 +1,11 @@
-# Whitelist: only code, paper sources, result summaries and figures are tracked.
+# Whitelist: only code, configs and result summaries are tracked (the manuscript stays local).
 # Data, model caches, environments, the TeX binary and internal planning notes stay local.
 /*
 !/.gitignore
 !/README.md
 !/LICENSE
 
-!/paper/
-/paper/*
-!/paper/main.tex
-!/paper/supplementary.tex
-!/paper/references.bib
-!/paper/main.pdf
-!/paper/supplementary.pdf
-!/paper/supp_xmaps.tex
-!/paper/supp_xtahoe.tex
-!/paper/supp_theory.tex
-!/paper/figs/
-
-!/theory/
-/theory/*
-!/theory/vc_minimax.md
+# paper/ and theory/ (manuscript, figures, proof notes) stay local: the repository holds code only.
 
 !/virtual_cell/
 /virtual_cell/*
