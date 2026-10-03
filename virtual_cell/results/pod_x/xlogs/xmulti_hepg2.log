@@ -1,0 +1,6 @@
+shared targets 2053 genes 3000
+->hepg2 m=25 noise/mse_mean 0.31 | gap closed avg_off +28% synth +32% rrr1 +19% rrr3 +26% synth_rrr +38% | split radius vs mean avg_off -12.5% synth -15.5% rrr1 -1.2% rrr3 -5.3% synth_rrr -15.5% | cov mean/rrr3 0.895/0.897
+->hepg2 m=50 noise/mse_mean 0.32 | gap closed avg_off +29% synth +32% rrr1 +27% rrr3 +35% synth_rrr +43% | split radius vs mean avg_off -19.0% synth -17.7% rrr1 -9.0% rrr3 -11.6% synth_rrr -20.8% | cov mean/rrr3 0.942/0.942
+->hepg2 m=100 noise/mse_mean 0.32 | gap closed avg_off +29% synth +33% rrr1 +37% rrr3 +44% synth_rrr +49% | split radius vs mean avg_off -13.2% synth -13.3% rrr1 -12.9% rrr3 -15.5% synth_rrr -20.1% | cov mean/rrr3 0.896/0.904
+->hepg2 m=200 noise/mse_mean 0.32 | gap closed avg_off +29% synth +33% rrr1 +45% rrr3 +52% synth_rrr +54% | split radius vs mean avg_off -16.0% synth -16.4% rrr1 -17.7% rrr3 -20.4% synth_rrr -24.9% | cov mean/rrr3 0.901/0.909
+XMULTI_DONE

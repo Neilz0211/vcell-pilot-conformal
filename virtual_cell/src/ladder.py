@@ -21,6 +21,7 @@ from pathlib import Path
 
 import anndata as ad
 import numpy as np
+from scipy.stats import spearmanr
 from sklearn.decomposition import PCA
 from sklearn.linear_model import Ridge
 from sklearn.neighbors import NearestNeighbors
@@ -105,7 +106,7 @@ def main():
         for n, d in sorted(agg.items(), key=lambda kv: kv[1]["qA"]):
             print(f"  {n:14s} qA {d['qA']:.3f} gainA {d['gainA_pct']:5.1f}%  qB {d['qB']:.3f} gainB {d['gainB_pct']:5.1f}%  covA {d['covA']:.3f}  covB_src {d['covB_src']:.3f}", flush=True)
         qa = np.array([d["qA"] for d in agg.values()]); cb = np.array([d["covB_src"] for d in agg.values()])
-        res[f"{A}->{B}_spearman_qA_covB"] = float(np.corrcoef(np.argsort(np.argsort(qa)), np.argsort(np.argsort(cb)))[0, 1])
+        res[f"{A}->{B}_spearman_qA_covB"] = float(spearmanr(qa, cb)[0])  # tie-aware (average ranks); see ladder_spearman.py
         print("  spearman(qA, covB_src) =", round(res[f"{A}->{B}_spearman_qA_covB"], 3), flush=True)
     (OUT / "ladder_metrics.json").write_text(json.dumps(res, indent=1))
     print("LADDER_DONE", flush=True)

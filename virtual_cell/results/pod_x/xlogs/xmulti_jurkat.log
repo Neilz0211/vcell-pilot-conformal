@@ -1,0 +1,6 @@
+shared targets 2053 genes 3000
+->jurkat m=25 noise/mse_mean 0.38 | gap closed avg_off -34% synth +26% rrr1 +12% rrr3 +18% synth_rrr +30% | split radius vs mean avg_off +11.8% synth -7.2% rrr1 +0.2% rrr3 -2.2% synth_rrr -8.0% | cov mean/rrr3 0.941/0.939
+->jurkat m=50 noise/mse_mean 0.38 | gap closed avg_off -34% synth +28% rrr1 +21% rrr3 +25% synth_rrr +34% | split radius vs mean avg_off +15.8% synth -11.6% rrr1 -2.4% rrr3 -6.1% synth_rrr -8.5% | cov mean/rrr3 0.916/0.913
+->jurkat m=100 noise/mse_mean 0.39 | gap closed avg_off -34% synth +29% rrr1 +29% rrr3 +36% synth_rrr +41% | split radius vs mean avg_off +2.0% synth -12.6% rrr1 -9.1% rrr3 -9.8% synth_rrr -15.1% | cov mean/rrr3 0.911/0.909
+->jurkat m=200 noise/mse_mean 0.39 | gap closed avg_off -35% synth +29% rrr1 +36% rrr3 +43% synth_rrr +47% | split radius vs mean avg_off +6.5% synth -11.6% rrr1 -11.7% rrr3 -13.7% synth_rrr -15.0% | cov mean/rrr3 0.903/0.899
+XMULTI_DONE

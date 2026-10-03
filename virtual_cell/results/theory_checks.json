@@ -753,7 +753,7 @@
  ],
  "D1_two_point_diameter": {
   "pass": true,
-  "detail": "ball q=1.0: cov0 0.392 cov_delta 0.011 both 0.000 valid_both=False diam/||delta||=0.67 | ball q=1.5: cov0 0.675 cov_delta 0.041 both 0.000 valid_both=False diam/||delta||=1.00 | ball q=2.15: cov0 0.901 cov_delta 0.146 both 0.122 valid_both=False diam/||delta||=1.43 | ball q=3.0: cov0 0.989 cov_delta 0.433 both 0.429 valid_both=False diam/||delta||=2.00 | ball q=5.2: cov0 1.000 cov_delta 0.981 both 0.981 valid_both=True diam/||delta||=3.47 | ball q=6.0: cov0 1.000 cov_delta 0.998 both 0.998 valid_both=True diam/||delta||=4.00 | two-ball r=2.15: cov0 0.925 cov_delta 0.925, diam 7.30 >= ||delta||=3.0, vol 29.0 < enclosing-ball vol 41.9 -> bound is on diameter, not volume"
+  "detail": "ball q=1.0: cov0 0.392 cov_delta 0.011 both 0.000 valid_both=False diam/||delta||=0.67 | ball q=1.5: cov0 0.675 cov_delta 0.041 both 0.000 valid_both=False diam/||delta||=1.00 | ball q=2.15: cov0 0.901 cov_delta 0.146 both 0.122 valid_both=False diam/||delta||=1.43 | ball q=3.0: cov0 0.989 cov_delta 0.433 both 0.429 valid_both=False diam/||delta||=2.00 | ball q=5.2: cov0 1.000 cov_delta 0.981 both 0.981 valid_both=True diam/||delta||=3.47 | ball q=6.0: cov0 1.000 cov_delta 0.998 both 0.998 valid_both=True diam/||delta||=4.00 | two-ball r=2.15: cov0 0.925 cov_delta 0.925, diam 7.30 >= ||delta||=3.0, vol 26.3 < enclosing-ball vol 41.9 -> bound is on diameter, not volume"
  },
  "D2_ball_family_volume": {
   "pass": true,

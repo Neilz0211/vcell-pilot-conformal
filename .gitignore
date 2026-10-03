@@ -12,7 +12,14 @@
 !/paper/references.bib
 !/paper/main.pdf
 !/paper/supplementary.pdf
+!/paper/supp_xmaps.tex
+!/paper/supp_xtahoe.tex
+!/paper/supp_theory.tex
 !/paper/figs/
+
+!/theory/
+/theory/*
+!/theory/vc_minimax.md
 
 !/virtual_cell/
 /virtual_cell/*
@@ -34,5 +41,8 @@
 !/virtual_cell/results/gears12/
 !/virtual_cell/results/tahoe/
 !/virtual_cell/results/state/
+!/virtual_cell/results/pod_x/
+!/virtual_cell/results/xdesign_pairs/
+!/virtual_cell/results/fig_budget_summary.txt
 !/virtual_cell/figures/
 !/virtual_cell/prereg/

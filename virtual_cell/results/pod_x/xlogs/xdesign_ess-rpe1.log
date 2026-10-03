@@ -1,0 +1,4 @@
+ess->rpe1 mfit=25 rrr MSE vs random-design rrr: random +0.0% kmeans -5.5% maxmin +3.9% big +46.5% dpp +14.5% | gap closed (rrr) random +14% kmeans +30% maxmin +28% big +17% dpp +20% | radius rrr/mean (random) 0.952 (kmeans) 0.844 | cov rrr random/kmeans/big 0.901/0.901/0.900
+ess->rpe1 mfit=50 rrr MSE vs random-design rrr: random +0.0% kmeans -11.1% maxmin -6.8% big +37.9% dpp -0.8% | gap closed (rrr) random +21% kmeans +38% maxmin +36% big +18% dpp +34% | radius rrr/mean (random) 0.888 (kmeans) 0.778 | cov rrr random/kmeans/big 0.898/0.904/0.908
+ess->rpe1 mfit=100 rrr MSE vs random-design rrr: random +0.0% kmeans -15.4% maxmin -13.4% big +12.6% dpp -9.5% | gap closed (rrr) random +27% kmeans +41% maxmin +40% big +32% dpp +39% | radius rrr/mean (random) 0.871 (kmeans) 0.743 | cov rrr random/kmeans/big 0.887/0.892/0.891
+XDESIGN_DONE

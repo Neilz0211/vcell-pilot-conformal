@@ -280,7 +280,8 @@ def check_d(rng):
     in_S0 = (n0 <= r) | (np.linalg.norm(eps - delta, axis=1) <= r)      # P_0: y - f = eps
     in_S1 = (n1 <= r) | (n0 <= r)                                       # P_delta: y - f = delta + eps
     c0 = float(in_S0.mean()); c1 = float(in_S1.mean())
-    vol_two = 2 * np.pi * r ** 2; vol_big = np.pi * (nd / 2 + r) ** 2
+    lens = 2 * r ** 2 * np.arccos(nd / (2 * r)) - nd / 2 * np.sqrt(4 * r ** 2 - nd ** 2) if nd < 2 * r else 0.0  # the two disks overlap
+    vol_two = 2 * np.pi * r ** 2 - lens; vol_big = np.pi * (nd / 2 + r) ** 2
     txt.append(f"two-ball r={r}: cov0 {c0:.3f} cov_delta {c1:.3f}, diam {nd + 2 * r:.2f} >= ||delta||={nd}, vol {vol_two:.1f} < enclosing-ball vol {vol_big:.1f} -> bound is on diameter, not volume")
     ok &= c0 >= 1 - alpha and c1 >= 1 - alpha and (nd + 2 * r) >= nd
     check("D1_two_point_diameter", ok, " | ".join(txt))

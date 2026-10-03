@@ -1,0 +1,4 @@
+rpe1->ess m=50 noise/mse_mean 0.30 | gap closed ridge -6% measc +12% gene +14% pcmap +12% rrr +20% knn +9% combo +21% pmap +20% | split radius vs mean ridge -2.7% measc -5.3% gene -6.1% pcmap -5.5% rrr -4.4% combo -4.4% pmap -7.6% | cov mean/rrr 0.910/0.915
+rpe1->ess m=100 noise/mse_mean 0.30 | gap closed ridge -6% measc +13% gene +15% pcmap +17% rrr +27% knn +15% combo +28% pmap +27% | split radius vs mean ridge -1.5% measc -5.6% gene -6.3% pcmap -5.0% rrr -8.9% combo -10.0% pmap -9.1% | cov mean/rrr 0.894/0.899
+rpe1->ess m=200 noise/mse_mean 0.30 | gap closed ridge -6% measc +13% gene +16% pcmap +21% rrr +34% knn +20% combo +35% pmap +34% | split radius vs mean ridge -1.7% measc -6.3% gene -7.6% pcmap -9.0% rrr -14.4% combo -14.7% pmap -13.8% | cov mean/rrr 0.900/0.901
+XMAP_DONE

@@ -1,0 +1,4 @@
+rpe1->jurkat m=50 noise/mse_mean 0.42 | gap closed ridge -10% measc +11% gene +13% pcmap +10% rrr +16% knn +8% combo +17% pmap +16% | split radius vs mean ridge +0.5% measc -3.9% gene -4.2% pcmap -2.4% rrr -2.6% combo -2.8% pmap -3.4% | cov mean/rrr 0.910/0.915
+rpe1->jurkat m=100 noise/mse_mean 0.42 | gap closed ridge -10% measc +11% gene +15% pcmap +16% rrr +24% knn +15% combo +25% pmap +25% | split radius vs mean ridge +0.2% measc -4.8% gene -5.7% pcmap -5.5% rrr -6.3% combo -6.2% pmap -7.2% | cov mean/rrr 0.901/0.900
+rpe1->jurkat m=200 noise/mse_mean 0.42 | gap closed ridge -10% measc +11% gene +16% pcmap +21% rrr +32% knn +20% combo +32% pmap +32% | split radius vs mean ridge +0.2% measc -4.5% gene -4.9% pcmap -5.0% rrr -7.5% combo -7.8% pmap -8.5% | cov mean/rrr 0.893/0.903
+XMAP_DONE

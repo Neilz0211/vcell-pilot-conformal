@@ -5,7 +5,8 @@ Fig 1  The paradox. (a) Source-line radius gain over predict-the-mean vs coverag
 Fig 2  Mechanism + efficiency law. (a) Coverage with source radius before vs after removing the oracle offset.
        (b) Prop C: predicted vs observed radius change of the exact adapted ball at m = 50 (all directed pairs).
 Fig 3  Pilots: radius vs m for pilot-only and the exact adapted ball ((m+1)/m x LOO radius), K562<->RPE1.
-usage: uv run python src/figures_paper.py"""
+Main-text versions (Figs 2-3 of the submission): fig2_transfer, fig3_repair (--main).
+usage: uv run python src/figures_paper.py [--main]"""
 from __future__ import annotations
 
 import json
@@ -100,5 +101,73 @@ def fig3():
     fig.tight_layout(); fig.savefig(FIG / "fig3_pilots.pdf"); fig.savefig(FIG / "fig3_pilots.png", dpi=200); plt.close(fig)
 
 
+BIG = {"font.size": 10, "axes.titlesize": 10, "axes.labelsize": 10, "legend.fontsize": 10, "xtick.labelsize": 10,
+       "ytick.labelsize": 10}
+
+
+def fig_transfer():
+    """Main-text Fig 2: (a) shift energy vs transferred coverage; (b) the inversion (same data as fig1, panels swapped)."""
+    L = json.loads((R / "ladder_metrics.json").read_text())
+    G12 = json.loads((R / "gears12_summary.json").read_text())
+    with plt.rc_context(BIG):
+        fig, ax = plt.subplots(1, 2, figsize=(6.5, 2.75))
+        for k, (v, ctrl) in pairs().items():
+            for mod, c in (("ridge10", "C0"), ("mean", "k")):
+                ax[0].scatter(v[mod]["Delta2"], v[mod]["covB_src"], c=c, marker="x" if ctrl else "o", s=18, lw=1 if ctrl else 0)
+        ax[0].axhline(0.9, ls="--", c="gray", lw=.8)
+        ax[0].set_xlabel(r"shift energy $\Delta^2$"); ax[0].set_ylabel("coverage in target line")
+        ax[0].set_title("(a) loss tracks the shift")
+        ax[0].scatter([], [], c="C0", s=18, label="ridge"); ax[0].scatter([], [], c="k", s=18, label="predict-the-mean")
+        ax[0].scatter([], [], c="gray", marker="x", s=18, lw=1, label="same-line controls")
+        ax[0].legend(loc="lower left", frameon=False)
+        for d, mk in (("K562->RPE1", "o"), ("RPE1->K562", "s")):
+            for n, v in L[d].items():
+                c = "k" if n == "mean" else ("C0" if "GO" in n else "C7")
+                ax[1].scatter(v["gainA_pct"], v["covB_src"] - L[d]["mean"]["covB_src"], c=c, marker=mk, s=16, alpha=.8, lw=0)
+        for k, v in G12.items():
+            ax[1].scatter(100 * (v["mqA"] - v["gqA"]) / v["mqA"], v["gcov"] - v["mcov"], c="C3", marker="*", s=50, zorder=5)
+        ax[1].axhline(0, ls="--", c="gray", lw=.8)
+        ax[1].set_xlabel("source radius gain (%)"); ax[1].set_ylim(-0.215, 0.012)
+        ax[1].set_ylabel("coverage minus\npredict-the-mean")
+        ax[1].set_title("(b) tighter in source, less covered")
+        ax[1].scatter([], [], c="C0", s=16, label="GO-feature models"); ax[1].scatter([], [], c="C7", s=16, label="gwps-feature models")
+        ax[1].scatter([], [], c="C3", marker="*", s=45, label="GEARS (tuned)")
+        ax[1].legend(loc="lower left", frameon=False)
+        fig.tight_layout(); fig.savefig(FIG / "fig2_transfer.pdf"); fig.savefig(FIG / "fig2_transfer.png", dpi=200); plt.close(fig)
+
+
+def fig_repair():
+    """Main-text Fig 3: (a, b) radius vs number of pilots, K562<->RPE1; (c) Prop C predicted vs observed change at m=50."""
+    A = json.loads((R / "adapt_metrics.json").read_text())
+    ms = (10, 20, 50, 100)
+    with plt.rc_context(BIG):
+        fig, ax = plt.subplots(1, 3, figsize=(6.5, 2.45))
+        for j, d in enumerate(("K562->RPE1", "RPE1->K562")):
+            pil = [A[f"{d}_m{m}"]["ridge_pilot"][1] for m in ms]
+            exa = [A[f"{d}_m{m}"]["ridge_offset"][1] * (m + 1) / m for m in ms]
+            ax[j].plot(ms, pil, "o-", c="C2", label="pilot-only", ms=4)
+            ax[j].plot(ms, exa, "o-", c="C0", label="adapted", ms=4)
+            ax[j].set_xscale("log"); ax[j].set_xticks(ms); ax[j].set_xticklabels(ms); ax[j].minorticks_off()
+            ax[j].set_xlabel("pilots $m$"); ax[j].set_title("(" + "ab"[j] + ") " + d.replace("->", r"$\to$"))
+        ax[0].set_ylabel("90% radius (RMSE)"); ax[1].legend(frameon=False, loc="upper right")
+        xs, ys, cs = [], [], []
+        for k, (v, ctrl) in pairs().items():
+            r = v["ridge10"]; rho = r["Delta2"] / r["sB2"]
+            xs.append(100 * (51 / 50 * np.sqrt((50 / 49) / (1 + rho)) - 1)); ys.append(100 * (r["exact_m50_q"] / r["pilot_m50_q"] - 1))
+            cs.append("gray" if ctrl else "C0")
+        ax[2].scatter(xs, ys, c=cs, s=16)
+        lim = [min(xs + ys) - 1, max(xs + ys) + 1]; ax[2].plot(lim, lim, ls=":", c="k", lw=.8)
+        ax[2].axhline(0, c="gray", lw=.5); ax[2].axvline(0, c="gray", lw=.5)
+        ax[2].set_xlabel("predicted change (%)"); ax[2].set_ylabel("observed change (%)")
+        ax[2].set_title("(c) Prop. C, $m$=50")
+        fig.tight_layout(); fig.savefig(FIG / "fig3_repair.pdf"); fig.savefig(FIG / "fig3_repair.png", dpi=200); plt.close(fig)
+        print("fig3c r =", round(float(np.corrcoef(xs, ys)[0, 1]), 3), "n =", len(xs))
+
+
 if __name__ == "__main__":
-    fig1(); fig2(); fig3(); print("PAPER_FIGS_DONE", FIG)
+    import sys
+    if "--main" in sys.argv:
+        fig_transfer(); fig_repair()
+    else:
+        fig1(); fig2(); fig3()
+    print("PAPER_FIGS_DONE", FIG)

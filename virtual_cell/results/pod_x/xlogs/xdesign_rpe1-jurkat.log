@@ -1,0 +1,4 @@
+rpe1->jurkat mfit=25 rrr MSE vs random-design rrr: random +0.0% kmeans -2.1% maxmin +6.6% big +21.1% dpp +11.3% | gap closed (rrr) random +11% kmeans +18% maxmin +10% big -4% dpp +10% | radius rrr/mean (random) 0.958 (kmeans) 0.908 | cov rrr random/kmeans/big 0.898/0.890/0.895
+rpe1->jurkat mfit=50 rrr MSE vs random-design rrr: random +0.0% kmeans -5.6% maxmin -2.4% big +24.5% dpp +3.7% | gap closed (rrr) random +17% kmeans +25% maxmin +21% big -2% dpp +17% | radius rrr/mean (random) 0.952 (kmeans) 0.919 | cov rrr random/kmeans/big 0.902/0.912/0.909
+rpe1->jurkat mfit=100 rrr MSE vs random-design rrr: random +0.0% kmeans -9.7% maxmin -9.6% big -1.5% dpp -6.3% | gap closed (rrr) random +24% kmeans +32% maxmin +31% big +27% dpp +27% | radius rrr/mean (random) 0.901 (kmeans) 0.825 | cov rrr random/kmeans/big 0.903/0.904/0.908
+XDESIGN_DONE

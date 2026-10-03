@@ -1,0 +1,13 @@
+ess->rpe1 N=1978 | rrr vs propA ridge m50/100/200 +6.2% -8.2% -10.8% | cov rrr 0.925/0.901/0.897
+ess->hepg2 N=1978 | rrr vs propA ridge m50/100/200 +1.9% -9.1% -14.3% | cov rrr 0.933/0.904/0.907
+ess->jurkat N=1978 | rrr vs propA ridge m50/100/200 +6.4% -1.0% -5.4% | cov rrr 0.920/0.911/0.902
+rpe1->ess N=1978 | rrr vs propA ridge m50/100/200 -0.6% -5.4% -11.8% | cov rrr 0.907/0.902/0.897
+rpe1->hepg2 N=2305 | rrr vs propA ridge m50/100/200 +6.1% -0.7% -10.1% | cov rrr 0.921/0.910/0.901
+rpe1->jurkat N=2305 | rrr vs propA ridge m50/100/200 +7.9% -1.1% -5.4% | cov rrr 0.916/0.896/0.904
+hepg2->ess N=1978 | rrr vs propA ridge m50/100/200 +7.4% -6.0% -9.9% | cov rrr 0.926/0.899/0.902
+hepg2->rpe1 N=2305 | rrr vs propA ridge m50/100/200 +8.0% -6.2% -10.0% | cov rrr 0.933/0.905/0.905
+hepg2->jurkat N=2305 | rrr vs propA ridge m50/100/200 +3.2% -2.8% -5.8% | cov rrr 0.917/0.898/0.907
+jurkat->ess N=1978 | rrr vs propA ridge m50/100/200 +13.6% -4.6% -6.1% | cov rrr 0.923/0.893/0.900
+jurkat->rpe1 N=2305 | rrr vs propA ridge m50/100/200 +8.1% -4.4% -5.4% | cov rrr 0.930/0.900/0.903
+jurkat->hepg2 N=2305 | rrr vs propA ridge m50/100/200 +15.6% -0.8% -9.9% | cov rrr 0.933/0.914/0.900
+XSENS_DONE

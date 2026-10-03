@@ -1,0 +1,17 @@
+ess->rpe1 propA q mean/ridge/meas m100 2.150/2.076/2.153
+ess->hepg2 propA q mean/ridge/meas m100 2.181/2.020/1.959
+ess->jurkat propA q mean/ridge/meas m100 1.511/1.397/1.580
+rpe1->ess propA q mean/ridge/meas m100 0.883/0.858/1.387
+rpe1->hepg2 propA q mean/ridge/meas m100 1.335/1.255/1.458
+rpe1->jurkat propA q mean/ridge/meas m100 0.906/0.905/1.437
+hepg2->ess propA q mean/ridge/meas m100 0.936/0.880/1.456
+hepg2->rpe1 propA q mean/ridge/meas m100 1.507/1.434/1.600
+hepg2->jurkat propA q mean/ridge/meas m100 0.988/0.972/1.476
+jurkat->ess propA q mean/ridge/meas m100 1.276/1.183/1.468
+jurkat->rpe1 propA q mean/ridge/meas m100 1.918/1.868/2.003
+jurkat->hepg2 propA q mean/ridge/meas m100 1.771/1.693/1.877
+others->ess propA q mmean/avg m50 1.018/1.092
+others->rpe1 propA q mmean/avg m50 1.956/1.607
+others->hepg2 propA q mmean/avg m50 1.755/1.462
+others->jurkat propA q mmean/avg m50 1.114/1.184
+XPROPA_DONE

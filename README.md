@@ -2,16 +2,19 @@
 
 Code, result summaries and paper sources for:
 
-> **Better in One Cell Line, More Overconfident in the Next: Calibrating and Repairing Virtual-Cell Predictions with a
-> Few Pilot Perturbations.** Jianguang Zhuang, Zhuowen Ye. Submitted to RECOMB 2027.
+> **Where Does the Uncertainty Come From? Calibrating and Attributing Error When Virtual-Cell Models Change Cell
+> Line.** Jianguang Zhuang, Zhuowen Ye. Submitted to RECOMB 2027.
 
 The paper studies conformal prediction sets for perturbation-response ("virtual cell") models that are calibrated in
 one cell line and used in another.
-- **Finding.** Source-calibrated sets lose coverage in the new line, and they lose more for models that are better in
-  the source line.
-- **Mechanism.** A shared cell-context response shift drives much of the loss.
-- **Method.** A few target-line pilot perturbations can be used twice, to estimate the shift and to calibrate. For
-  the mean-offset adapter the full-conformal set has a closed form with finite-sample coverage ≥ 1 − α.
+- **Finding.** Source-calibrated sets lose coverage in the new line by an amount that tracks the energy of the shift
+  between the lines; on four CRISPRi lines they lose more for models that are better in the source line. A
+  pre-registered replication on Tahoe-100M passed two of six predictions (`virtual_cell/prereg/`).
+- **Method.** A few random target-line pilot perturbations can be used twice, to estimate the shift and to calibrate.
+  For the mean-offset adapter this is exactly full conformal prediction, with finite-sample coverage ≥ 1 − α and a
+  closed-form enclosing ball.
+- **Attribution.** Split-half cells separate measurement noise from the rest of the residual; noise is a minority of
+  it. A source-learned difficulty score transfers and protects the hardest perturbations.
 
 ## Layout
 
@@ -68,14 +71,17 @@ into `results/` (logs are tracked as `results/*.log`).
 | Perturbation-specific readout and audit | `src/specific.py --seeds 20`, `src/audit_specific.py`, `src/utility.py` | `specific_metrics.json`, `specific.md`, `audit_specific.log`, `utility_metrics.json` |
 | Pathway scores (Fig. 4) | `src/pathway.py --seeds 20`, `src/fig_pathway.py` | `pathway_metrics.json`, `pathway_run20.log` |
 | Numerical checks of the theory | `src/theory_checks.py` | `theory_checks.json` |
-| Paper figures 1-3 | `src/figures_paper.py` | `paper/figs/` |
+| Paper figures 1-3 | `src/fig_schematic.py` (Fig. 1), `src/figures_paper.py --main` (Figs. 2-3; without `--main`: the supplementary versions) | `paper/figs/` |
 | Tahoe-100M pre-registered replication (Section 5.5, Appendix D) | registration `prereg/PREREG_tahoe.md` (git 6561021); on a 32-vCPU cloud CPU machine: `pod/tahoe_extract.py OUT` (downloads the CC0 DE table from Hugging Face), `pod/tahoe_compact.py OUT`, `pod/tahoe_pairs.py OUT/compact --pairs all --models core --seeds 20`, `--pairs subset100 --models ladder --seeds 10`, `--pairs all --models core --seeds 20 --dose high`, then `pod/tahoe_summary.py` and `pod/tahoe_posthoc.py` | `tahoe_*_metrics.json`, `tahoe_summary.md` (P1-P6), `tahoe_posthoc.md` (exploratory), `tahoe/` (gene pool, units, lines) |
 | STATE retrained per source line (Section 5.1, Appendix E) | on a GPU machine with `pip install arc-state`: `pod/st_prep.py` (Arc's `Replogle-Nadig-Preprint/replogle.h5ad`, GO-SVD features), `pod/st_train.sh SRC SEED STEPS` (seed 0: 20,000 steps; seeds 1-2: 8,000), `state tx predict --predict-only` (set `OMP_NUM_THREADS`), `pod/st_eval.py`, `pod/st_summary.py` | `st_eval_*.json`, `st_summary.txt` |
-| Split-half noise floor and error attribution (Section 5.4, Fig. 5, Appendix F) | on a CPU machine: `pod/pseudobulk.py RAW.h5ad OUT.h5ad --parity=0|1` for each line (Arc's `Replogle-Nadig-Preprint` single-cell files), `pod/noise_export.py genes3000.txt noise.npz` -> `data/noise.npz`; then `src/ceiling.py --seeds 20 --readout all|top100|pc10`, `src/fig_attribution.py` | `ceiling_*_metrics.json`, `ceiling_*_run20.log`, `paper/figs/fig5_attribution.pdf` |
+| Split-half noise floor and error attribution (Section 5.3, Fig. 4, Appendix F) | on a CPU machine: `pod/pseudobulk.py RAW.h5ad OUT.h5ad --parity=0|1` for each line (Arc's `Replogle-Nadig-Preprint` single-cell files), `pod/noise_export.py genes3000.txt noise.npz` -> `data/noise.npz`; then `src/ceiling.py --seeds 20 --readout all|top100|pc10`, `src/fig_attribution.py` | `ceiling_*_metrics.json`, `ceiling_*_run20.log`, `paper/figs/fig4_floor.pdf`, `fig5_attribution.pdf` (supplementary) |
 | Pretrained gene embeddings as source features (Section 5.1, Appendix F) | GPU: `pod/embed_genes.py targets.tsv emb.npz` (ESM2-650M, Geneformer V2-104M) -> `data/gene_emb.npz`; then `src/embed_eval.py --seeds 10` | `embed_eval_metrics.json` |
-| Difficulty transfer (Section 5.5, Appendix F) | `src/difficulty.py --seeds 20` | `difficulty_metrics.json`, `difficulty_run20.log` |
+| Difficulty transfer (Section 5.4, Appendix F) | `src/difficulty.py --seeds 20` | `difficulty_metrics.json`, `difficulty_run20.log` |
 | Transfer signals that did not close the gap (Appendix F) | `src/transfer_measured.py --seeds 20`, `src/decision.py --seeds 3` | `transfer_measured_metrics.json`, `decision_metrics.json` |
-| Tahoe zero/few-pilot pooling (Section 5.6, Appendix D) | `pod/tahoe_zeroshot.py OUT --sources 12 --seeds 5` after the Tahoe extraction | `tahoe_zeroshot.md` |
+| Tahoe zero/few-pilot pooling (Section 5.5, Appendix D) | `pod/tahoe_zeroshot.py OUT --sources 12 --seeds 5` after the Tahoe extraction | `tahoe_zeroshot.md` |
+| Learned cross-line maps, exploratory (Section 5.3, Appendix C) | per pair (run on a 16-vCPU pod with `src/run_xjobs.sh 5`, or locally one process at a time): `src/xmap.py --seeds 20 --only A,B`, `src/xmulti.py --seeds 20 --only B`, `src/xdesign.py --seeds 20 --only A,B [--common-test]`; locally: `src/xpropa.py`, `src/xsens.py`, `src/xsplit.py --fracs 0.6,0.7`; then `src/xsummary.py`, `src/xtables.py`, `src/fig_budget.py` | `pod_x/{xmap,xmulti,xdesign}_pairs/`, `xdesign_pairs/*_ct.json`, `xpropa_s20_metrics.json`, `xsens_s20_metrics.json`, `xsplit_all_s20.json`, `xsummary.md`, `fig_budget_summary.txt`, `paper/supp_xmaps.tex`, `paper/figs/fig5_budget.pdf` |
+| Tahoe cross-line prediction, exploratory (Section 5.5, Appendix D) | `pod/tahoe_xline.py OUT --seeds 5 --workers 6` after the Tahoe extraction (set `OMP_NUM_THREADS=1`) | `pod_x/tahoe_xline.json`, `paper/supp_xtahoe.tex` |
+| Minimax size and pilot threshold (Section 3, Appendix G) | proofs in `theory/vc_minimax.md` (two adversarial checks, Section 9); `src/sim_minimax.py` | `sim_minimax.json` |
 
 Build the paper with any LaTeX engine, for example `tectonic main.tex` inside `paper/`.
 

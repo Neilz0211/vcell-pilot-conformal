@@ -1,0 +1,16 @@
+map, fit 50% m=50: radius vs current recipe median +7.7% [+1.1, +15.0], below 0 in 0/12 (mean over seeds); coverage 0.912-0.944
+map, fit 50% m=100: radius vs current recipe median -5.2% [-12.6, +0.4], below 0 in 11/12 (mean over seeds); coverage 0.894-0.916
+map, fit 50% m=200: radius vs current recipe median -8.0% [-16.0, -5.5], below 0 in 12/12 (mean over seeds); coverage 0.901-0.915
+map, fit 60% m=50: radius vs current recipe median +0.3% [-12.0, +6.3], below 0 in 5/12 (mean over seeds); coverage 0.886-0.926
+map, fit 60% m=100: radius vs current recipe median -6.1% [-16.9, -1.7], below 0 in 12/12 (mean over seeds); coverage 0.883-0.912
+map, fit 60% m=200: radius vs current recipe median -9.3% [-15.7, -4.2], below 0 in 12/12 (mean over seeds); coverage 0.892-0.912
+map, fit 70% m=50: radius vs current recipe median +18.3% [-1.7, +33.3], below 0 in 1/12 (mean over seeds); coverage 0.920-0.961
+map, fit 70% m=100: radius vs current recipe median -5.2% [-13.3, +1.9], below 0 in 11/12 (mean over seeds); coverage 0.877-0.917
+map, fit 70% m=200: radius vs current recipe median -7.3% [-15.7, -1.9], below 0 in 12/12 (mean over seeds); coverage 0.888-0.917
+PerturbMap-st., 50% m=50: radius vs current recipe median +4.3% [-0.5, +11.6], below 0 in 3/12 (mean over seeds); coverage 0.907-0.940
+PerturbMap-st., 50% m=100: radius vs current recipe median -5.9% [-11.5, +0.0], below 0 in 11/12 (mean over seeds); coverage 0.893-0.917
+PerturbMap-st., 50% m=200: radius vs current recipe median -8.4% [-16.3, -6.3], below 0 in 12/12 (mean over seeds); coverage 0.898-0.915
+three lines -> K562: avg+offset (Prop A) +2.7 +7.8 +3.6 +2.1 | learned -8.1 -4.9 -18.5 -20.4 (m=25,50,100,200; % vs Prop A pilot mean)
+three lines -> RPE1: avg+offset (Prop A) -16.2 -17.5 -16.6 -15.4 | learned +4.6 -3.6 -18.8 -22.9 (m=25,50,100,200; % vs Prop A pilot mean)
+three lines -> HepG2: avg+offset (Prop A) -19.7 -16.5 -17.2 -17.3 | learned -18.2 -7.1 -21.1 -24.6 (m=25,50,100,200; % vs Prop A pilot mean)
+three lines -> Jurkat: avg+offset (Prop A) +2.9 +7.5 +4.3 +6.6 | learned -2.8 -5.9 -14.0 -14.6 (m=25,50,100,200; % vs Prop A pilot mean)

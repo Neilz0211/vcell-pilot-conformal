@@ -34,3 +34,16 @@ ax[1].set_title("(b) measurement noise by readout", fontsize=8)
 fig.tight_layout(); FIG.mkdir(exist_ok=True)
 fig.savefig(FIG / "fig5_attribution.pdf"); fig.savefig(FIG / "fig5_attribution.png", dpi=200)
 print("wrote", FIG / "fig5_attribution.pdf")
+
+# main-text version (submission Fig. 4): panel (a) only, larger type; panel (b) is in the supplementary
+with plt.rc_context({"font.size": 10, "legend.fontsize": 10, "xtick.labelsize": 10, "ytick.labelsize": 10}):
+    fig, a = plt.subplots(figsize=(6.5, 2.5))
+    for j, (key, nm, c) in enumerate((("floor", "noise floor (iid-cell estimate)", "0.6"), ("ad_ridge", "adapted ridge", "C0"),
+                                        ("ad_mean", "adapted pilot mean", "C1"), ("pil_ridge", "pilot-only ridge", "C2"))):
+        a.bar(x + (j - 1.5) * w, [R["all"][k][key] for k in pairs], w, label=nm, color=c)
+    a.set_xticks(x); a.set_xticklabels(lab, rotation=35, ha="right")
+    h, l = a.get_legend_handles_labels(); o = [0, 2, 1, 3]   # column-wise fill -> rows read in bar order
+    a.set_ylabel("90% radius (RMSE)"); a.legend([h[i] for i in o], [l[i] for i in o], frameon=False, ncol=2, loc="upper right")
+    a.set_ylim(0, 1.5 * max(R["all"][k]["pil_ridge"] for k in pairs))
+    fig.tight_layout(); fig.savefig(FIG / "fig4_floor.pdf"); fig.savefig(FIG / "fig4_floor.png", dpi=200)
+print("wrote", FIG / "fig4_floor.pdf")
